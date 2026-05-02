@@ -58,10 +58,10 @@ JSON 中每条记录至少包含：
 3. 开始训练
 --------------------------------------------------------------------------------
 python new_code/train.py \
-  --train_json ./new_code/json/train_labels.json \
-  --test_json ./new_code/json/test_labels.json \
+  --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
+  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
-  --output_dir ./new_code/runs/run_005 \
+  --output_dir ./new_code/runs/run_006 \
   --batch_size 4 \
   --epochs 50 \
   --learning_rate 1e-5
