@@ -61,10 +61,11 @@ python new_code/train.py \
   --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
-  --output_dir ./new_code/runs/run_006 \
+  --output_dir ./new_code/runs/run_007 \
   --batch_size 4 \
   --epochs 50 \
-  --learning_rate 1e-5
+  --learning_rate 1e-5 \
+  --save_all_epochs
 
 输出内容包括：
 - best_model.pth
@@ -78,7 +79,7 @@ python new_code/train.py \
 4. 单独评估
 --------------------------------------------------------------------------------
 python new_code/evaluate.py \
-  --test_json ./new_code/json/test_labels.json \
+  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
   --weights ./new_code/runs/run_001/best_model.pth \
   --norm_stats ./new_code/runs/run_001/train_norm_stats.pkl \
