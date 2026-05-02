@@ -1,0 +1,129 @@
+================================================================================
+LLNM-Net 运行步骤（最终版）
+================================================================================
+在仓库根目录执行；train.pkl / test.pkl 须位于运行 train_LLNM_Net.py 时的当前工作目录。
+Git Bash / WSL 可用行尾 “\” 续行；PowerShell 建议写成一行，或用 “^” 续行。
+
+--------------------------------------------------------------------------------
+1. 环境与依赖
+--------------------------------------------------------------------------------
+pip install -r requirements.txt
+
+首次运行下载 bert-base-chinese 失败时（任选一种）：
+PowerShell:
+$env:HF_ENDPOINT="https://hf-mirror.com"
+Bash:
+export HF_ENDPOINT=https://hf-mirror.com
+
+训练需 NVIDIA GPU 及与当前 PyTorch 版本匹配的 CUDA（requirements 中为 cu117 系列）。
+
+--------------------------------------------------------------------------------
+2. 数据目录约定
+--------------------------------------------------------------------------------
+图像按类别分子文件夹，名称与下面 --label_mapping 一致，例如：
+./dataset_processed/train/train_NonMeta/
+./dataset_processed/train/train_Meta/
+./dataset_processed/test/test_NonMeta/
+./dataset_processed/test/test_Meta/
+
+可选表格路径（与下列命令一致即可）：
+./output/体格指标数据.xlsx（列：姓名、年龄、性别）
+./output/radiomics_features.csv（列：filename；另含 shape / echo 对应列）
+
+--------------------------------------------------------------------------------
+3.（可选）提取 radiomics 得 CSV
+--------------------------------------------------------------------------------
+依赖 pyradiomics；将 META_IMG、META_MSK、NONMETA_IMG、NONMETA_MSK、YAML 换成你的目录与 yaml。
+
+python extract_radiomics_2d.py \
+  --meta_image_dir /mnt/wangbd8/workspace/ThyroidAgent/LLNM-Net/dataset_processed/train/train_Meta \
+  --meta_mask_dir /mnt/wangbd8/workspace/ThyroidAgent/LLNM-Net/dataset_processed/train/train_Meta_predictions \
+  --nonmeta_image_dir /mnt/wangbd8/workspace/ThyroidAgent/LLNM-Net/dataset_processed/train/train_NonMeta \
+  --nonmeta_mask_dir /mnt/wangbd8/workspace/ThyroidAgent/LLNM-Net/dataset_processed/train/train_NonMeta_predictions \
+  --output_csv ./output/radiomics_features.csv
+
+--------------------------------------------------------------------------------
+4. 生成训练集 pkl（默认归一化，同目录生成 train_norm_params.pkl）
+--------------------------------------------------------------------------------
+python prepare_data.py \
+  --mode folder \
+  --image_dir ./dataset_processed/new_train \
+  --output train.pkl \
+  --label_mapping "train_NonMeta:0,train_Meta:1" \
+  --patient_info "./output/体格指标数据_new.xlsx" \
+  --radiomics_csv "./output/radiomics_features.csv" \
+  --shape_feature original_shape2D_Elongation \
+  --echo_feature original_firstorder_Mean
+
+不归一化时（须与测试一致）在上一段命令末尾追加：--no-normalize
+
+--------------------------------------------------------------------------------
+5. 生成测试集 pkl
+--------------------------------------------------------------------------------
+python prepare_data.py \
+  --mode folder \
+  --image_dir ./dataset_processed/new_test \
+  --output test.pkl \
+  --label_mapping "test_NonMeta:0,test_Meta:1" \
+  --patient_info ./output/体格指标数据_new.xlsx \
+  --radiomics_csv ./output/radiomics_features.csv \
+  --shape_feature original_shape2D_Elongation \
+  --echo_feature original_firstorder_Mean
+
+测试集与训练的归一化策略应一致；推理用 test_binary_classification 时配合 train_norm_params.pkl。
+
+--------------------------------------------------------------------------------
+6. 训练（train_LLNM_Net.py）
+--------------------------------------------------------------------------------
+日志与权重目录：train_YYYYMMDD_HHMMSS/
+
+python train_LLNM_Net.py \
+  --CLS 2 \
+  --BSZ 2 \
+  --DATA_DIR ./dataset_processed/new_train \
+  --SET_TYPE train \
+  --TEST_DATA_DIR ./dataset_processed/new_test \
+  --TEST_SET_TYPE test \
+  --mode train
+
+仅训练、训练中不评估 test.pkl：
+
+python train_LLNM_Net.py --CLS 2 --BSZ 2 --DATA_DIR ./dataset_processed/train --SET_TYPE train --mode train
+
+仅测试（当前目录须有与 SET_TYPE 同名的 pkl；将 MODEL_PATH 换成实际 .pth）：
+
+python train_LLNM_Net.py --CLS 2 --BSZ 2 --DATA_DIR ./dataset_processed/test --SET_TYPE test --mode test --model_path MODEL_PATH
+
+训练结束后在同一命令内再执行脚本内的 test()（使用当前 SET_TYPE / DATA_DIR；与训练循环中的 TEST_SET 无关）：
+
+python train_LLNM_Net.py --CLS 2 --BSZ 2 --DATA_DIR ./dataset_processed/train --SET_TYPE train --mode both
+
+--------------------------------------------------------------------------------
+7.（可选）旧脚本 LLNM_Net.py
+--------------------------------------------------------------------------------
+python LLNM_Net.py --CLS 2 --BSZ 2 --DATA_DIR ./dataset_processed/train --SET_TYPE train --mode train
+
+--------------------------------------------------------------------------------
+8. 独立二分类评估（test_binary_classification.py）
+--------------------------------------------------------------------------------
+将 MODEL_PATH 换成 train_时间戳 目录下实际 .pth。
+
+python test_binary_classification.py \
+  --model_path MODEL_PATH \
+  --class0_dir test_NonMeta \
+  --class1_dir test_Meta \
+  --image_dir ./dataset_processed/test \
+  --norm_params_file ./train_norm_params.pkl
+
+使用 pkl 时（已准备 test.pkl）：
+
+python test_binary_classification.py --model_path MODEL_PATH --pkl_file test --image_dir ./dataset_processed/test
+
+--------------------------------------------------------------------------------
+9. 产物检查
+--------------------------------------------------------------------------------
+train.pkl、test.pkl（与训练时工作目录一致）
+train_norm_params.pkl（启用归一化时）
+train_YYYYMMDD_HHMMSS 下：.pth、.log、loss_auc.png、pre_gt.png；若配置了测试集可有 test_metrics_history.txt
+
+================================================================================

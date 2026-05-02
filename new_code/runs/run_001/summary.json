@@ -1,0 +1,16 @@
+{
+  "output_dir": "new_code/runs/run_001",
+  "best_model": "new_code/runs/run_001/best_model.pth",
+  "best_metric": "auroc",
+  "best_score": 0.8133587786259543,
+  "train_samples": 8041,
+  "test_samples": 271,
+  "norm_stats": {
+    "age_mean": 50.0,
+    "age_std": 1e-06,
+    "shape_mean": 0.0,
+    "shape_std": 1e-06,
+    "echo_mean": 0.0,
+    "echo_std": 1e-06
+  }
+}
