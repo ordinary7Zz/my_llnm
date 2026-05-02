@@ -72,6 +72,7 @@ python new_code/train.py \
 - summary.json
 - train_norm_stats.pkl
 - test_outputs_epoch_XXX.json
+- checkpoint_epoch_XXX.pth (when --save_all_epochs)
 
 --------------------------------------------------------------------------------
 4. 单独评估
@@ -96,6 +97,10 @@ python new_code/evaluate.py \
 如需加载已有权重继续训练：
 
 --pretrained_weights MODEL_PATH
+
+如需保存每个 epoch 的权重：
+
+--save_all_epochs
 
 --------------------------------------------------------------------------------
 6. 注意

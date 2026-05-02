@@ -43,6 +43,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--resize_size", type=int, default=256)
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--save_best_metric", type=str, choices=["auroc", "loss"], default="auroc")
+    parser.add_argument("--save_all_epochs", action="store_true")
     return parser.parse_args()
 
 
@@ -187,6 +188,10 @@ def main() -> None:
             best_score = candidate_score
             model_to_save = model.module if isinstance(model, torch.nn.DataParallel) else model
             torch.save(model_to_save.state_dict(), best_model_path)
+
+        if args.save_all_epochs:
+            model_to_save = model.module if isinstance(model, torch.nn.DataParallel) else model
+            torch.save(model_to_save.state_dict(), output_dir / f"checkpoint_epoch_{epoch:03d}.pth")
 
     summary = {
         "output_dir": str(output_dir),
