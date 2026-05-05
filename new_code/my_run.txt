@@ -55,6 +55,41 @@ JSON 中每条记录至少包含：
 - LNM_CN01 为 -1 的样本不会进入训练或测试
 
 --------------------------------------------------------------------------------
+2.1 形状与回声特征提取（基于 JSON 输入方式）
+--------------------------------------------------------------------------------
+先从图像与 mask 提取 shape/echo 特征 CSV，再把 CSV 接入训练。
+
+训练集特征提取（同时保存 echo 统计）：
+python extract_llnm_shape_echo.py \
+  --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
+  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
+  --mask_dir /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/masks \
+  --output_csv ./output/train_shape_echo.csv \
+  --path_mode relative \
+  --relative_to /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
+  --label_key LNM_CN01 \
+  --mask_threshold 0 \
+  --mask_suffix "" \
+  --dilation_value 3 \
+  --save_stats_json ./output/echo_stats.json
+
+测试集特征提取（复用训练集 echo 统计）：
+python extract_llnm_shape_echo.py \
+  --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
+  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
+  --mask_dir /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/masks \
+  --output_csv ./output/test_shape_echo.csv \
+  --path_mode relative \
+  --relative_to /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
+  --label_key LNM_CN01 \
+  --load_stats_json ./output/echo_stats.json
+
+训练时接入特征：
+--radiomics_csv ./output/train_shape_echo.csv \
+--shape_feature llnm_ratio \
+--echo_feature p_norm_echo
+
+--------------------------------------------------------------------------------
 3. 开始训练
 --------------------------------------------------------------------------------
 python new_code/train.py \
@@ -62,6 +97,9 @@ python new_code/train.py \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
   --output_dir ./new_code/runs/run_007 \
+  --radiomics_csv ./output/train_shape_echo.csv \
+  --shape_feature llnm_ratio \
+  --echo_feature p_norm_echo \
   --batch_size 4 \
   --epochs 50 \
   --learning_rate 1e-5 \
