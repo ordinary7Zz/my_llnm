@@ -424,12 +424,13 @@ def _extract_split(
 def _extract_from_manifest(
     args: Args,
     relative_root: Path | None,
-) -> tuple[list[dict[str, Any]], int]:
+) -> tuple[list[dict[str, Any]], int, int]:
     if args.manifest_json is None or args.image_root is None or args.mask_dir is None:
         raise ValueError("manifest_json, image_root, and mask_dir are required in manifest mode")
 
     rows: list[dict[str, Any]] = []
     failures = 0
+    skipped_invalid_labels = 0
     records = _load_manifest(args.manifest_json)
     if args.limit is not None:
         records = records[: args.limit]
@@ -442,7 +443,8 @@ def _extract_from_manifest(
                 raise KeyError(f"label key '{args.label_key}' not found")
             label = int(record[args.label_key])
             if label not in (0, 1):
-                raise ValueError(f"unsupported label: {label}")
+                skipped_invalid_labels += 1
+                continue
 
             filename_value = record.get("filename", record.get("image"))
             if filename_value is None:
@@ -486,19 +488,20 @@ def _extract_from_manifest(
                 continue
             raise RuntimeError(message) from exc
 
-    return rows, failures
+    return rows, failures, skipped_invalid_labels
 
 
 def main() -> None:
     args = parse_args()
     manifest_mode = args.manifest_json is not None
+    skipped_invalid_labels = 0
     if manifest_mode:
         if args.image_root is None:
             raise ValueError("--image_root is required when using --manifest_json")
         if args.mask_dir is None:
             raise ValueError("--mask_dir is required when using --manifest_json")
         relative_root = args.relative_to.resolve() if args.path_mode == "relative" and args.relative_to else args.image_root.resolve()
-        rows, failures = _extract_from_manifest(args, relative_root)
+        rows, failures, skipped_invalid_labels = _extract_from_manifest(args, relative_root)
         meta_failures = failures
         nonmeta_failures = 0
     else:
@@ -567,6 +570,7 @@ def main() -> None:
         "Done. "
         f"meta_images={len(meta_rows) if not manifest_mode else 0} "
         f"nonmeta_images={len(nonmeta_rows) if not manifest_mode else 0} "
+        f"skipped_invalid_labels={skipped_invalid_labels} "
         f"empty_masks={empty_masks} "
         f"failures={meta_failures + nonmeta_failures} saved={args.output_csv}"
     )
