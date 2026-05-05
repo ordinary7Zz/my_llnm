@@ -20,10 +20,10 @@ class Args:
     manifest_json: Path | None
     image_root: Path | None
     mask_dir: Path | None
-    meta_image_dir: Path
-    meta_mask_dir: Path
-    nonmeta_image_dir: Path
-    nonmeta_mask_dir: Path
+    meta_image_dir: Path | None
+    meta_mask_dir: Path | None
+    nonmeta_image_dir: Path | None
+    nonmeta_mask_dir: Path | None
     output_csv: Path
     path_mode: str
     relative_to: Path | None
@@ -64,10 +64,10 @@ def parse_args() -> Args:
     parser.add_argument("--manifest_json", type=Path, default=None)
     parser.add_argument("--image_root", type=Path, default=None)
     parser.add_argument("--mask_dir", type=Path, default=None)
-    parser.add_argument("--meta_image_dir", type=Path, required=True)
-    parser.add_argument("--meta_mask_dir", type=Path, required=True)
-    parser.add_argument("--nonmeta_image_dir", type=Path, required=True)
-    parser.add_argument("--nonmeta_mask_dir", type=Path, required=True)
+    parser.add_argument("--meta_image_dir", type=Path, default=None)
+    parser.add_argument("--meta_mask_dir", type=Path, default=None)
+    parser.add_argument("--nonmeta_image_dir", type=Path, default=None)
+    parser.add_argument("--nonmeta_mask_dir", type=Path, default=None)
     parser.add_argument("--output_csv", type=Path, required=True)
     parser.add_argument(
         "--path_mode",
@@ -90,6 +90,28 @@ def parse_args() -> Args:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--label_key", type=str, default="LNM_CN01")
     raw = parser.parse_args()
+
+    manifest_mode = raw.manifest_json is not None
+    if manifest_mode:
+        if raw.image_root is None:
+            parser.error("--image_root is required when using --manifest_json")
+        if raw.mask_dir is None:
+            parser.error("--mask_dir is required when using --manifest_json")
+    else:
+        missing = []
+        if raw.meta_image_dir is None:
+            missing.append("--meta_image_dir")
+        if raw.meta_mask_dir is None:
+            missing.append("--meta_mask_dir")
+        if raw.nonmeta_image_dir is None:
+            missing.append("--nonmeta_image_dir")
+        if raw.nonmeta_mask_dir is None:
+            missing.append("--nonmeta_mask_dir")
+        if missing:
+            parser.error(
+                "the following arguments are required in split mode: " + ", ".join(missing)
+            )
+
     return Args(
         manifest_json=raw.manifest_json,
         image_root=raw.image_root,
