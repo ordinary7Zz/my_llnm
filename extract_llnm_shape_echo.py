@@ -494,7 +494,7 @@ def main() -> None:
         "Done. "
         f"meta_images={len(meta_rows) if not manifest_mode else 0} "
         f"nonmeta_images={len(nonmeta_rows) if not manifest_mode else 0} "
-        f"failures={meta_failures + nonmeta_failures} saved={args.output_csv}")
+        f"failures={meta_failures + nonmeta_failures} saved={args.output_csv}"
     )
 
 
