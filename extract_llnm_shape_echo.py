@@ -13,6 +13,11 @@ from PIL import Image
 
 _IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".PNG", ".JPG", ".JPEG"}
 _EPS = 1e-6
+_EMPTY_LLNM_RATIO = 0.0
+_EMPTY_NODULE_ECHO = 0.0
+_EMPTY_BOUND_ECHO = 0.0
+_EMPTY_ECHO_SUB = 0.0
+_EMPTY_P_NORM_ECHO = 0.5
 
 
 @dataclass(frozen=True)
@@ -277,8 +282,9 @@ def _max_pdf_difference(mu_a: float, sigma_a: float, mu_b: float, sigma_b: float
 
 
 def _fit_echo_stats(rows: list[dict[str, Any]]) -> EchoStats:
-    benign = np.asarray([row["echo_sub"] for row in rows if row["label"] == 0], dtype=np.float64)
-    malignant = np.asarray([row["echo_sub"] for row in rows if row["label"] == 1], dtype=np.float64)
+    valid_rows = [row for row in rows if int(row.get("mask_empty", 0)) == 0]
+    benign = np.asarray([row["echo_sub"] for row in valid_rows if row["label"] == 0], dtype=np.float64)
+    malignant = np.asarray([row["echo_sub"] for row in valid_rows if row["label"] == 1], dtype=np.float64)
     if benign.size == 0 or malignant.size == 0:
         raise ValueError("Both NonMeta(label=0) and Meta(label=1) samples are required to fit echo stats")
 
@@ -319,6 +325,18 @@ def _compute_p_norm_echo(echo_sub: float, stats: EchoStats) -> float:
     else:
         value = 0.5 + p_echo / (2.0 * max(stats.benign_range, _EPS))
     return float(np.clip(value, 0.0, 1.0))
+
+
+def _empty_feature_row(filename: str, label: int) -> dict[str, Any]:
+    return {
+        "filename": filename,
+        "label": int(label),
+        "mask_empty": 1,
+        "llnm_ratio": _EMPTY_LLNM_RATIO,
+        "nodule_echo": _EMPTY_NODULE_ECHO,
+        "bound_echo": _EMPTY_BOUND_ECHO,
+        "echo_sub": _EMPTY_ECHO_SUB,
+    }
 
 
 def _common_relative_root(args: Args) -> Path:
@@ -375,12 +393,17 @@ def _extract_split(
             mask_path = _find_mask(mask_dir, image_path, args.mask_suffix)
             image = _read_gray(image_path)
             mask = _read_mask(mask_path, args.mask_threshold)
+            filename = _format_filename(image_path, args.path_mode, relative_root)
+            if int(mask.sum()) == 0:
+                rows.append(_empty_feature_row(filename, label))
+                continue
             ratio = _compute_llnm_ratio(mask, args.dilation_value)
             nodule_echo, bound_echo, echo_sub = _compute_echo_features(image, mask, args.dilation_value)
             rows.append(
                 {
-                    "filename": _format_filename(image_path, args.path_mode, relative_root),
+                    "filename": filename,
                     "label": int(label),
+                    "mask_empty": 0,
                     "llnm_ratio": ratio,
                     "nodule_echo": nodule_echo,
                     "bound_echo": bound_echo,
@@ -438,12 +461,17 @@ def _extract_from_manifest(
             )
             image = _read_gray(image_path)
             mask = _read_mask(mask_path, args.mask_threshold)
+            filename_out = _format_filename(image_path, args.path_mode, relative_root)
+            if int(mask.sum()) == 0:
+                rows.append(_empty_feature_row(filename_out, label))
+                continue
             ratio = _compute_llnm_ratio(mask, args.dilation_value)
             nodule_echo, bound_echo, echo_sub = _compute_echo_features(image, mask, args.dilation_value)
             rows.append(
                 {
-                    "filename": _format_filename(image_path, args.path_mode, relative_root),
+                    "filename": filename_out,
                     "label": int(label),
+                    "mask_empty": 0,
                     "llnm_ratio": ratio,
                     "nodule_echo": nodule_echo,
                     "bound_echo": bound_echo,
@@ -505,11 +533,14 @@ def main() -> None:
         )
 
     for row in rows:
-        row["p_norm_echo"] = _compute_p_norm_echo(row["echo_sub"], stats)
+        row["p_norm_echo"] = _EMPTY_P_NORM_ECHO if int(row.get("mask_empty", 0)) == 1 else _compute_p_norm_echo(row["echo_sub"], stats)
+
+    empty_masks = sum(1 for row in rows if int(row.get("mask_empty", 0)) == 1)
 
     fieldnames = [
         "filename",
         "label",
+        "mask_empty",
         "llnm_ratio",
         "nodule_echo",
         "bound_echo",
@@ -536,6 +567,7 @@ def main() -> None:
         "Done. "
         f"meta_images={len(meta_rows) if not manifest_mode else 0} "
         f"nonmeta_images={len(nonmeta_rows) if not manifest_mode else 0} "
+        f"empty_masks={empty_masks} "
         f"failures={meta_failures + nonmeta_failures} saved={args.output_csv}"
     )
 

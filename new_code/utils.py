@@ -111,8 +111,9 @@ def load_radiomics_features(
 
         shape_val = row[shape_feature] if shape_feature in row and pd.notna(row[shape_feature]) else 0.0
         echo_val = row[echo_feature] if echo_feature in row and pd.notna(row[echo_feature]) else 0.0
-        radiomics_dict[filename] = {"shape": float(shape_val), "echo": float(echo_val)}
-        radiomics_dict[os.path.basename(filename)] = {"shape": float(shape_val), "echo": float(echo_val)}
+        mask_empty_val = row["mask_empty"] if "mask_empty" in row and pd.notna(row["mask_empty"]) else 0.0
+        radiomics_dict[filename] = {"shape": float(shape_val), "echo": float(echo_val), "mask_empty": int(mask_empty_val)}
+        radiomics_dict[os.path.basename(filename)] = {"shape": float(shape_val), "echo": float(echo_val), "mask_empty": int(mask_empty_val)}
 
     return radiomics_dict
 
@@ -159,6 +160,7 @@ def build_sample_records(
         radiomics = radiomics_dict.get(filename) or radiomics_dict.get(os.path.basename(filename)) or {}
         shape_val = float(record.get("shape", radiomics.get("shape", 0.0)))
         echo_val = float(record.get("echo", radiomics.get("echo", 0.0)))
+        mask_empty_val = int(record.get("mask_empty", radiomics.get("mask_empty", 0)))
 
         samples.append(
             {
@@ -170,6 +172,7 @@ def build_sample_records(
                 "sex": sex,
                 "shape": shape_val,
                 "echo": echo_val,
+                "mask_empty": mask_empty_val,
             }
         )
 
