@@ -10,6 +10,9 @@ backup/
 # 特征提取临时文件
 Feature extraction/
 
+# 原代码
+LLNM-Net-main/
+
 # 运行时缓存
 .ipynb_checkpoints/
 __pycache__/
@@ -32,3 +35,5 @@ log/
 
 # 系统文件
 .DS_Store
+
+*.zip
