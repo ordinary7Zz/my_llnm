@@ -164,12 +164,27 @@ def _find_mask(mask_dir: Path, image_path: Path, mask_suffix: str) -> Path:
     raise FileNotFoundError(f"Mask not found for {image_path.name} in {mask_dir}")
 
 
-def _resolve_mask_path(mask_dir: Path, image_path: Path, mask_suffix: str) -> Path:
-    relative = Path(image_path.name)
-    direct = mask_dir / relative
-    if direct.exists():
-        return direct
-    return _find_mask(mask_dir, image_path, mask_suffix)
+def _find_mask_from_relative(mask_dir: Path, relative_image_path: Path, mask_suffix: str) -> Path:
+    base_parent = mask_dir / relative_image_path.parent
+    base_name = relative_image_path.stem + mask_suffix
+    for ext in _IMAGE_EXTS:
+        candidate = base_parent / f"{base_name}{ext}"
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        f"Mask not found for {relative_image_path.as_posix()} in {mask_dir}"
+    )
+
+
+def _resolve_mask_path(mask_dir: Path, image_root: Path, image_path: Path, mask_suffix: str) -> Path:
+    relative = image_path.relative_to(image_root)
+    try:
+        return _find_mask_from_relative(mask_dir, relative, mask_suffix)
+    except FileNotFoundError:
+        direct = mask_dir / relative
+        if direct.exists():
+            return direct
+        return _find_mask(mask_dir, image_path, mask_suffix)
 
 
 def _normalize_to_255(arr: np.ndarray) -> np.ndarray:
@@ -415,7 +430,12 @@ def _extract_from_manifest(
             if not image_path.exists():
                 raise FileNotFoundError(f"image not found: {image_path}")
 
-            mask_path = _resolve_mask_path(args.mask_dir, image_path, args.mask_suffix)
+            mask_path = _resolve_mask_path(
+                args.mask_dir,
+                args.image_root,
+                image_path,
+                args.mask_suffix,
+            )
             image = _read_gray(image_path)
             mask = _read_mask(mask_path, args.mask_threshold)
             ratio = _compute_llnm_ratio(mask, args.dilation_value)
