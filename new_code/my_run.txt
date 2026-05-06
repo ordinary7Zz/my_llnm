@@ -96,7 +96,7 @@ python new_code/train.py \
   --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
-  --output_dir ./new_code/runs/run_007 \
+  --output_dir ./new_code/runs/run_008 \
   --radiomics_csv ./output/train_shape_echo.csv \
   --shape_feature llnm_ratio \
   --echo_feature p_norm_echo \
