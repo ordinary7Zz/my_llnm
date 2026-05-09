@@ -150,3 +150,43 @@ python new_code/evaluate.py \
 - train_json 和 test_json 必须分别提供
 
 ================================================================================
+
+
+LymphUs 数据集：
+python extract_llnm_shape_echo.py \
+  --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_train_labels.json \
+  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center1/images \
+  --mask_dir /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center1/masks \
+  --output_csv ./output/LymphUs/train_shape_echo.csv \
+  --path_mode relative \
+  --relative_to /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center1/images \
+  --label_key LNM_CN01 \
+  --mask_threshold 0 \
+  --mask_suffix "" \
+  --dilation_value 3 \
+  --save_stats_json ./output/LymphUs/echo_stats.json
+
+测试集特征提取（复用训练集 echo 统计）：
+python extract_llnm_shape_echo.py \
+  --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_test_labels.json \
+  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/images \
+  --mask_dir /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/masks \
+  --output_csv ./output/LymphUs/test_shape_echo.csv \
+  --path_mode relative \
+  --relative_to mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/images \
+  --label_key LNM_CN01 \
+  --load_stats_json ./output/LymphUs/echo_stats.json
+
+python new_code/train.py \
+  --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_train_labels.json \
+  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_test_labels.json \
+  --train_image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center1/images \
+  --test_image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/images \
+  --output_dir ./new_code/runs/LymphUs/run_001 \
+  --radiomics_csv ./output/LymphUs/train_shape_echo.csv \
+  --shape_feature llnm_ratio \
+  --echo_feature p_norm_echo \
+  --batch_size 4 \
+  --epochs 50 \
+  --learning_rate 1e-5 \
+  --save_all_epochs

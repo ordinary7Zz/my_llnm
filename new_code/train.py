@@ -24,7 +24,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train LLNM-Net from JSON manifests")
     parser.add_argument("--train_json", type=str, required=True)
     parser.add_argument("--test_json", type=str, default=None)
-    parser.add_argument("--image_root", type=str, required=True)
+    parser.add_argument("--train_image_root", type=str, default=None)
+    parser.add_argument("--test_image_root", type=str, default=None)
+    parser.add_argument("--image_root", type=str, default=None)
     parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--patient_info", type=str, default=None)
     parser.add_argument("--radiomics_csv", type=str, default=None)
@@ -44,7 +46,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--save_best_metric", type=str, choices=["auroc", "loss"], default="auroc")
     parser.add_argument("--save_all_epochs", action="store_true")
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.train_image_root is None and args.image_root is None:
+        parser.error("one of --train_image_root or --image_root is required")
+    if args.train_image_root is None:
+        args.train_image_root = args.image_root
+    if args.test_image_root is None:
+        args.test_image_root = args.train_image_root
+    return args
 
 
 def load_weights(model: torch.nn.Module, weight_path: str) -> torch.nn.Module:
@@ -74,7 +83,7 @@ def main() -> None:
 
     train_dataset_raw = LLNMDataset(
         manifest_path=args.train_json,
-        image_root=args.image_root,
+        image_root=args.train_image_root,
         patient_info_file=args.patient_info,
         radiomics_csv=args.radiomics_csv,
         default_report=args.default_report,
@@ -90,7 +99,7 @@ def main() -> None:
 
     train_dataset = LLNMDataset(
         manifest_path=args.train_json,
-        image_root=args.image_root,
+        image_root=args.train_image_root,
         patient_info_file=args.patient_info,
         radiomics_csv=args.radiomics_csv,
         default_report=args.default_report,
@@ -109,7 +118,7 @@ def main() -> None:
     if args.test_json:
         test_dataset = LLNMDataset(
             manifest_path=args.test_json,
-            image_root=args.image_root,
+            image_root=args.test_image_root,
             patient_info_file=args.patient_info,
             radiomics_csv=args.radiomics_csv,
             default_report=args.default_report,
