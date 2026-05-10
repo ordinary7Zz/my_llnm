@@ -1,0 +1,16 @@
+{
+  "output_dir": "new_code/runs/run_0010_lr1e-4",
+  "best_model": "new_code/runs/run_0010_lr1e-4/best_model.pth",
+  "best_metric": "auroc",
+  "best_score": 0.7370800000000001,
+  "train_samples": 7812,
+  "test_samples": 500,
+  "norm_stats": {
+    "age_mean": 50.0,
+    "age_std": 1e-06,
+    "shape_mean": 1.1452312469482422,
+    "shape_std": 0.5227150321006775,
+    "echo_mean": 0.2924276888370514,
+    "echo_std": 0.2891799509525299
+  }
+}
