@@ -148,11 +148,11 @@ python new_code/train.py \
 
 ```bash
 python new_code/evaluate.py \
-  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
-  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
-  --weights ./new_code/runs/run_001/best_model.pth \
-  --norm_stats ./new_code/runs/run_001/train_norm_stats.pkl \
-  --output ./new_code/runs/run_001/eval_results.json
+  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/LymphUs_test_labels.json \
+  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/images \
+  --weights ./new_code/runs/LymphUs/run_001/best_model.pth \
+  --norm_stats ./new_code/runs/LymphUs/run_001/train_norm_stats.pkl \
+  --output ./new_code/runs/evaluate/eval_results.json
 ```
 
 ## 5. 可选参数
