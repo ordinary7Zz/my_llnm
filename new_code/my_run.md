@@ -1,44 +1,63 @@
-================================================================================
-LLNM-Net 新流程运行说明
-================================================================================
-适用范围：
+# LLNM-Net 新流程运行说明
+
+## 适用范围
+
 - 图像统一放在同一个根目录下
 - 标签来自 JSON 文件
-- 仅使用 LNM_CN01 == 0 或 1 的样本
-- LNM_CN01 == -1 的样本自动丢弃
+- 仅使用 `LNM_CN01 == 0` 或 `1` 的样本
+- `LNM_CN01 == -1` 的样本自动丢弃
 - 训练集和测试集分别由两个 JSON 文件提供
 
 在仓库根目录执行以下命令。
 
---------------------------------------------------------------------------------
-1. 安装依赖
---------------------------------------------------------------------------------
+## 1. 安装依赖
+
+```bash
 pip install -r requirements.txt
+```
 
-首次下载 bert-base-chinese 失败时：
-PowerShell:
+首次下载 `bert-base-chinese` 失败时：
+
+**PowerShell:**
+
+```powershell
 $env:HF_ENDPOINT="https://hf-mirror.com"
+```
 
-Bash:
+**Bash:**
+
+```bash
 export HF_ENDPOINT=https://hf-mirror.com
+```
 
---------------------------------------------------------------------------------
-2. 数据约定
---------------------------------------------------------------------------------
-图像目录：
+## 2. 数据约定
+
+### 图像目录
+
+```text
 ./dataset_all_images/
+```
 
-训练标签文件：
+### 训练标签文件
+
+```text
 ./new_code/json/train_labels.json
+```
 
-测试标签文件：
+### 测试标签文件
+
+```text
 ./new_code/json/test_labels.json
+```
 
-JSON 中每条记录至少包含：
-- filename
-- LNM_CN01
+### JSON 中每条记录至少包含
 
-示例：
+- `filename`
+- `LNM_CN01`
+
+### 示例
+
+```json
 [
   {
     "filename": "2016/叶永强/叶永强_01_0001_0001.jpg",
@@ -49,17 +68,20 @@ JSON 中每条记录至少包含：
     "LNM_CN01": 0
   }
 ]
+```
 
-说明：
-- filename 应为相对于 image_root 的路径
-- LNM_CN01 为 -1 的样本不会进入训练或测试
+### 说明
 
---------------------------------------------------------------------------------
-2.1 形状与回声特征提取（基于 JSON 输入方式）
---------------------------------------------------------------------------------
+- `filename` 应为相对于 `image_root` 的路径
+- `LNM_CN01` 为 `-1` 的样本不会进入训练或测试
+
+## 2.1 形状与回声特征提取（基于 JSON 输入方式）
+
 先从图像与 mask 提取 shape/echo 特征 CSV，再把 CSV 接入训练。
 
-训练集特征提取（同时保存 echo 统计）：
+### 训练集特征提取（同时保存 echo 统计）
+
+```bash
 python extract_llnm_shape_echo.py \
   --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
@@ -72,8 +94,11 @@ python extract_llnm_shape_echo.py \
   --mask_suffix "" \
   --dilation_value 3 \
   --save_stats_json ./output/echo_stats.json
+```
 
-测试集特征提取（复用训练集 echo 统计）：
+### 测试集特征提取（复用训练集 echo 统计）
+
+```bash
 python extract_llnm_shape_echo.py \
   --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
@@ -83,15 +108,19 @@ python extract_llnm_shape_echo.py \
   --relative_to /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
   --label_key LNM_CN01 \
   --load_stats_json ./output/echo_stats.json
+```
 
-训练时接入特征：
+### 训练时接入特征
+
+```bash
 --radiomics_csv ./output/train_shape_echo.csv \
 --shape_feature llnm_ratio \
 --echo_feature p_norm_echo
+```
 
---------------------------------------------------------------------------------
-3. 开始训练
---------------------------------------------------------------------------------
+## 3. 开始训练
+
+```bash
 python new_code/train.py \
   --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
@@ -104,55 +133,65 @@ python new_code/train.py \
   --epochs 50 \
   --learning_rate 1e-5 \
   --save_all_epochs
+```
 
-输出内容包括：
-- best_model.pth
-- history.json
-- summary.json
-- train_norm_stats.pkl
-- test_outputs_epoch_XXX.json
-- checkpoint_epoch_XXX.pth (when --save_all_epochs)
+### 输出内容包括
 
---------------------------------------------------------------------------------
-4. 单独评估
---------------------------------------------------------------------------------
+- `best_model.pth`
+- `history.json`
+- `summary.json`
+- `train_norm_stats.pkl`
+- `test_outputs_epoch_XXX.json`
+- `checkpoint_epoch_XXX.pth`（when `--save_all_epochs`）
+
+## 4. 单独评估
+
+```bash
 python new_code/evaluate.py \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
   --weights ./new_code/runs/run_001/best_model.pth \
   --norm_stats ./new_code/runs/run_001/train_norm_stats.pkl \
   --output ./new_code/runs/run_001/eval_results.json
+```
 
---------------------------------------------------------------------------------
-5. 可选参数
---------------------------------------------------------------------------------
-如有额外表格，可在 build_manifest.py / train.py / evaluate.py 中追加：
+## 5. 可选参数
 
+如有额外表格，可在 `build_manifest.py` / `train.py` / `evaluate.py` 中追加：
+
+```bash
 --patient_info ./output/体格指标数据.xlsx
 --radiomics_csv ./output/radiomics_features.csv
 --shape_feature original_shape2D_Elongation
 --echo_feature original_firstorder_Mean
+```
 
 如需加载已有权重继续训练：
 
+```bash
 --pretrained_weights MODEL_PATH
+```
 
 如需保存每个 epoch 的权重：
 
+```bash
 --save_all_epochs
+```
 
---------------------------------------------------------------------------------
-6. 注意
---------------------------------------------------------------------------------
+## 6. 注意
+
 - 训练归一化参数只从训练集统计
 - 测试集会复用训练集归一化参数
-- train.py 不会自己切分训练/测试集
-- train_json 和 test_json 必须分别提供
+- `train.py` 不会自己切分训练/测试集
+- `train_json` 和 `test_json` 必须分别提供
 
-================================================================================
+---
 
+## LymphUs 数据集
 
-LymphUs 数据集：
+### 训练集特征提取
+
+```bash
 python extract_llnm_shape_echo.py \
   --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_train_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center1/images \
@@ -165,8 +204,11 @@ python extract_llnm_shape_echo.py \
   --mask_suffix "" \
   --dilation_value 3 \
   --save_stats_json ./output/LymphUs/echo_stats.json
+```
 
-测试集特征提取（复用训练集 echo 统计）：
+### 测试集特征提取（复用训练集 echo 统计）
+
+```bash
 python extract_llnm_shape_echo.py \
   --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/images \
@@ -176,7 +218,11 @@ python extract_llnm_shape_echo.py \
   --relative_to mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/images \
   --label_key LNM_CN01 \
   --load_stats_json ./output/LymphUs/echo_stats.json
+```
 
+### 训练命令
+
+```bash
 python new_code/train.py \
   --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_train_labels.json \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_test_labels.json \
@@ -190,3 +236,19 @@ python new_code/train.py \
   --epochs 50 \
   --learning_rate 1e-5 \
   --save_all_epochs
+```
+
+### 不输入 Shape 和 Echo
+
+```bash
+python new_code/train.py \
+  --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_train_labels.json \
+  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/LymphUs_test_labels.json \
+  --train_image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center1/images \
+  --test_image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis/center2/images \
+  --output_dir ./new_code/runs/LymphUs/run_001 \
+  --batch_size 4 \
+  --epochs 50 \
+  --learning_rate 1e-5 \
+  --save_all_epochs
+```

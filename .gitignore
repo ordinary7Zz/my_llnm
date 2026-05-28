@@ -37,3 +37,5 @@ log/
 .DS_Store
 
 *.zip
+
+.vscode/*
