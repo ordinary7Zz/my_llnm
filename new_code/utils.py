@@ -294,6 +294,7 @@ def ensure_dir(path: str | Path) -> None:
 
 def dump_json(data: object, output_path: str | Path) -> None:
     path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
