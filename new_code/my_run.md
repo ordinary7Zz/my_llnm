@@ -83,7 +83,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 
 ```bash
 python extract_llnm_shape_echo.py \
-  --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
+  --manifest_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/LymphUs_train_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
   --mask_dir /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped_predictions \
   --output_csv ./output/train_shape_echo.csv \
@@ -122,10 +122,10 @@ python extract_llnm_shape_echo.py \
 
 ```bash
 python new_code/train.py \
-  --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/train_labels.json \
-  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped/test_labels.json \
-  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Malignant_ultrasound_images_cropped \
-  --output_dir ./new_code/runs/run_008 \
+  --train_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/LymphUs_train_labels.json \
+  --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/LymphUs_test_labels.json \
+  --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/images \
+  --output_dir ./new_code/runs/LymphUs/run_009 \
   --radiomics_csv ./output/train_shape_echo.csv \
   --shape_feature llnm_ratio \
   --echo_feature p_norm_echo \
@@ -150,8 +150,8 @@ python new_code/train.py \
 python new_code/evaluate.py \
   --test_json /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/LymphUs_test_labels.json \
   --image_root /mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/Lymph_Node_Metastasis_fake/images \
-  --weights ./new_code/runs/LymphUs/run_001/best_model.pth \
-  --norm_stats ./new_code/runs/LymphUs/run_001/train_norm_stats.pkl \
+  --weights ./new_code/runs/LymphUs/run_004_fake/best_model.pth \
+  --norm_stats ./new_code/runs/LymphUs/run_004_fake/train_norm_stats.pkl \
   --output ./new_code/runs/evaluate/eval_results.json
 ```
 
