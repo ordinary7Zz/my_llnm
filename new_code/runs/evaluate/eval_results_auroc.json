@@ -4,1579 +4,1579 @@
     "image_file": "10_Benign_center2.png",
     "image_name": "10_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5983210504055023,
-    "prob_class_1": 0.4016789495944977,
+    "prob_class_0": 0.988970572128892,
+    "prob_class_1": 0.011029427871108055,
     "predicted_class": 0,
-    "confidence": 0.5983210504055023
+    "confidence": 0.988970572128892
   },
   {
     "record_type": "sample",
     "image_file": "10_Malignant_center2.png",
     "image_name": "10_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5985239744186401,
-    "prob_class_1": 0.40147602558135986,
-    "predicted_class": 0,
-    "confidence": 0.5985239744186401
+    "prob_class_0": 0.010146081447601318,
+    "prob_class_1": 0.9898539185523987,
+    "predicted_class": 1,
+    "confidence": 0.9898539185523987
   },
   {
     "record_type": "sample",
     "image_file": "11_Benign_center2.png",
     "image_name": "11_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5916692614555359,
-    "prob_class_1": 0.4083307385444641,
+    "prob_class_0": 0.9967202921397984,
+    "prob_class_1": 0.003279707860201597,
     "predicted_class": 0,
-    "confidence": 0.5916692614555359
+    "confidence": 0.9967202921397984
   },
   {
     "record_type": "sample",
     "image_file": "11_Malignant_center2.png",
     "image_name": "11_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5955302119255066,
-    "prob_class_1": 0.4044697880744934,
+    "prob_class_0": 0.6242943704128265,
+    "prob_class_1": 0.37570562958717346,
     "predicted_class": 0,
-    "confidence": 0.5955302119255066
+    "confidence": 0.6242943704128265
   },
   {
     "record_type": "sample",
     "image_file": "12_Benign_center2.png",
     "image_name": "12_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5842227935791016,
-    "prob_class_1": 0.41577720642089844,
+    "prob_class_0": 0.9962996519170702,
+    "prob_class_1": 0.0037003480829298496,
     "predicted_class": 0,
-    "confidence": 0.5842227935791016
+    "confidence": 0.9962996519170702
   },
   {
     "record_type": "sample",
     "image_file": "12_Malignant_center2.png",
     "image_name": "12_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.598209947347641,
-    "prob_class_1": 0.401790052652359,
-    "predicted_class": 0,
-    "confidence": 0.598209947347641
+    "prob_class_0": 0.00010597705841064453,
+    "prob_class_1": 0.9998940229415894,
+    "predicted_class": 1,
+    "confidence": 0.9998940229415894
   },
   {
     "record_type": "sample",
     "image_file": "13_Benign_center2.png",
     "image_name": "13_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5958219170570374,
-    "prob_class_1": 0.40417808294296265,
+    "prob_class_0": 0.9963585000950843,
+    "prob_class_1": 0.0036414999049156904,
     "predicted_class": 0,
-    "confidence": 0.5958219170570374
+    "confidence": 0.9963585000950843
   },
   {
     "record_type": "sample",
     "image_file": "13_Malignant_center2.png",
     "image_name": "13_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5959242284297943,
-    "prob_class_1": 0.4040757715702057,
-    "predicted_class": 0,
-    "confidence": 0.5959242284297943
+    "prob_class_0": 0.00012803077697753906,
+    "prob_class_1": 0.9998719692230225,
+    "predicted_class": 1,
+    "confidence": 0.9998719692230225
   },
   {
     "record_type": "sample",
     "image_file": "14_Benign_center2.png",
     "image_name": "14_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.580951601266861,
-    "prob_class_1": 0.41904839873313904,
+    "prob_class_0": 0.993337310384959,
+    "prob_class_1": 0.0066626896150410175,
     "predicted_class": 0,
-    "confidence": 0.580951601266861
+    "confidence": 0.993337310384959
   },
   {
     "record_type": "sample",
     "image_file": "14_Malignant_center2.png",
     "image_name": "14_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5964187979698181,
-    "prob_class_1": 0.4035812020301819,
+    "prob_class_0": 0.981126556172967,
+    "prob_class_1": 0.018873443827033043,
     "predicted_class": 0,
-    "confidence": 0.5964187979698181
+    "confidence": 0.981126556172967
   },
   {
     "record_type": "sample",
     "image_file": "15_Benign_center2.png",
     "image_name": "15_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5956071615219116,
-    "prob_class_1": 0.4043928384780884,
+    "prob_class_0": 0.9936226475983858,
+    "prob_class_1": 0.006377352401614189,
     "predicted_class": 0,
-    "confidence": 0.5956071615219116
+    "confidence": 0.9936226475983858
   },
   {
     "record_type": "sample",
     "image_file": "15_Malignant_center2.png",
     "image_name": "15_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5986202955245972,
-    "prob_class_1": 0.40137970447540283,
-    "predicted_class": 0,
-    "confidence": 0.5986202955245972
+    "prob_class_0": 0.00012993812561035156,
+    "prob_class_1": 0.9998700618743896,
+    "predicted_class": 1,
+    "confidence": 0.9998700618743896
   },
   {
     "record_type": "sample",
     "image_file": "16_Benign_center2.png",
     "image_name": "16_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5949633121490479,
-    "prob_class_1": 0.40503668785095215,
+    "prob_class_0": 0.9942983412183821,
+    "prob_class_1": 0.00570165878161788,
     "predicted_class": 0,
-    "confidence": 0.5949633121490479
+    "confidence": 0.9942983412183821
   },
   {
     "record_type": "sample",
     "image_file": "16_Malignant_center2.png",
     "image_name": "16_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5950039923191071,
-    "prob_class_1": 0.40499600768089294,
-    "predicted_class": 0,
-    "confidence": 0.5950039923191071
+    "prob_class_0": 0.00011646747589111328,
+    "prob_class_1": 0.9998835325241089,
+    "predicted_class": 1,
+    "confidence": 0.9998835325241089
   },
   {
     "record_type": "sample",
     "image_file": "17_Benign_center2.png",
     "image_name": "17_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5803502202033997,
-    "prob_class_1": 0.41964977979660034,
+    "prob_class_0": 0.9920886112377048,
+    "prob_class_1": 0.007911388762295246,
     "predicted_class": 0,
-    "confidence": 0.5803502202033997
+    "confidence": 0.9920886112377048
   },
   {
     "record_type": "sample",
     "image_file": "17_Malignant_center2.png",
     "image_name": "17_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5918995440006256,
-    "prob_class_1": 0.4081004559993744,
-    "predicted_class": 0,
-    "confidence": 0.5918995440006256
+    "prob_class_0": 0.00011181831359863281,
+    "prob_class_1": 0.9998881816864014,
+    "predicted_class": 1,
+    "confidence": 0.9998881816864014
   },
   {
     "record_type": "sample",
     "image_file": "18_Benign_center2.png",
     "image_name": "18_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5839582681655884,
-    "prob_class_1": 0.4160417318344116,
+    "prob_class_0": 0.9771190136671066,
+    "prob_class_1": 0.02288098633289337,
     "predicted_class": 0,
-    "confidence": 0.5839582681655884
+    "confidence": 0.9771190136671066
   },
   {
     "record_type": "sample",
     "image_file": "18_Malignant_center2.png",
     "image_name": "18_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5903438329696655,
-    "prob_class_1": 0.4096561670303345,
-    "predicted_class": 0,
-    "confidence": 0.5903438329696655
+    "prob_class_0": 0.00011229515075683594,
+    "prob_class_1": 0.9998877048492432,
+    "predicted_class": 1,
+    "confidence": 0.9998877048492432
   },
   {
     "record_type": "sample",
     "image_file": "19_Benign_center2.png",
     "image_name": "19_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5961830317974091,
-    "prob_class_1": 0.40381696820259094,
+    "prob_class_0": 0.9954802095890045,
+    "prob_class_1": 0.004519790410995483,
     "predicted_class": 0,
-    "confidence": 0.5961830317974091
+    "confidence": 0.9954802095890045
   },
   {
     "record_type": "sample",
     "image_file": "19_Malignant_center2.png",
     "image_name": "19_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.597668319940567,
-    "prob_class_1": 0.402331680059433,
-    "predicted_class": 0,
-    "confidence": 0.597668319940567
+    "prob_class_0": 0.0001227855682373047,
+    "prob_class_1": 0.9998772144317627,
+    "predicted_class": 1,
+    "confidence": 0.9998772144317627
   },
   {
     "record_type": "sample",
     "image_file": "1_Benign_center2.png",
     "image_name": "1_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5980656743049622,
-    "prob_class_1": 0.40193432569503784,
+    "prob_class_0": 0.9851134456694126,
+    "prob_class_1": 0.014886554330587387,
     "predicted_class": 0,
-    "confidence": 0.5980656743049622
+    "confidence": 0.9851134456694126
   },
   {
     "record_type": "sample",
     "image_file": "1_Malignant_center2.png",
     "image_name": "1_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5986184477806091,
-    "prob_class_1": 0.40138155221939087,
-    "predicted_class": 0,
-    "confidence": 0.5986184477806091
+    "prob_class_0": 0.00010979175567626953,
+    "prob_class_1": 0.9998902082443237,
+    "predicted_class": 1,
+    "confidence": 0.9998902082443237
   },
   {
     "record_type": "sample",
     "image_file": "20_Benign_center2.png",
     "image_name": "20_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5941436290740967,
-    "prob_class_1": 0.4058563709259033,
+    "prob_class_0": 0.9894767794758081,
+    "prob_class_1": 0.010523220524191856,
     "predicted_class": 0,
-    "confidence": 0.5941436290740967
+    "confidence": 0.9894767794758081
   },
   {
     "record_type": "sample",
     "image_file": "20_Malignant_center2.png",
     "image_name": "20_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5932157039642334,
-    "prob_class_1": 0.4067842960357666,
-    "predicted_class": 0,
-    "confidence": 0.5932157039642334
+    "prob_class_0": 0.00043278932571411133,
+    "prob_class_1": 0.9995672106742859,
+    "predicted_class": 1,
+    "confidence": 0.9995672106742859
   },
   {
     "record_type": "sample",
     "image_file": "21_Benign_center2.png",
     "image_name": "21_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.596843957901001,
-    "prob_class_1": 0.403156042098999,
+    "prob_class_0": 0.9945686822757125,
+    "prob_class_1": 0.00543131772428751,
     "predicted_class": 0,
-    "confidence": 0.596843957901001
+    "confidence": 0.9945686822757125
   },
   {
     "record_type": "sample",
     "image_file": "21_Malignant_center2.png",
     "image_name": "21_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5806767642498016,
-    "prob_class_1": 0.41932323575019836,
-    "predicted_class": 0,
-    "confidence": 0.5806767642498016
+    "prob_class_0": 0.00019556283950805664,
+    "prob_class_1": 0.9998044371604919,
+    "predicted_class": 1,
+    "confidence": 0.9998044371604919
   },
   {
     "record_type": "sample",
     "image_file": "22_Benign_center2.png",
     "image_name": "22_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.594207227230072,
-    "prob_class_1": 0.405792772769928,
+    "prob_class_0": 0.9958109329454601,
+    "prob_class_1": 0.004189067054539919,
     "predicted_class": 0,
-    "confidence": 0.594207227230072
+    "confidence": 0.9958109329454601
   },
   {
     "record_type": "sample",
     "image_file": "22_Malignant_center2.png",
     "image_name": "22_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5897894501686096,
-    "prob_class_1": 0.4102105498313904,
-    "predicted_class": 0,
-    "confidence": 0.5897894501686096
+    "prob_class_0": 0.0007560253143310547,
+    "prob_class_1": 0.999243974685669,
+    "predicted_class": 1,
+    "confidence": 0.999243974685669
   },
   {
     "record_type": "sample",
     "image_file": "23_Benign_center2.png",
     "image_name": "23_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5970827639102936,
-    "prob_class_1": 0.4029172360897064,
+    "prob_class_0": 0.995540474075824,
+    "prob_class_1": 0.004459525924175978,
     "predicted_class": 0,
-    "confidence": 0.5970827639102936
+    "confidence": 0.995540474075824
   },
   {
     "record_type": "sample",
     "image_file": "23_Malignant_center2.png",
     "image_name": "23_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5983339250087738,
-    "prob_class_1": 0.4016660749912262,
-    "predicted_class": 0,
-    "confidence": 0.5983339250087738
+    "prob_class_0": 0.000125885009765625,
+    "prob_class_1": 0.9998741149902344,
+    "predicted_class": 1,
+    "confidence": 0.9998741149902344
   },
   {
     "record_type": "sample",
     "image_file": "24_Benign_center2.png",
     "image_name": "24_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5927082002162933,
-    "prob_class_1": 0.40729179978370667,
+    "prob_class_0": 0.9947491497732699,
+    "prob_class_1": 0.005250850226730108,
     "predicted_class": 0,
-    "confidence": 0.5927082002162933
+    "confidence": 0.9947491497732699
   },
   {
     "record_type": "sample",
     "image_file": "24_Malignant_center2.png",
     "image_name": "24_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5967141091823578,
-    "prob_class_1": 0.4032858908176422,
-    "predicted_class": 0,
-    "confidence": 0.5967141091823578
+    "prob_class_0": 0.00011420249938964844,
+    "prob_class_1": 0.9998857975006104,
+    "predicted_class": 1,
+    "confidence": 0.9998857975006104
   },
   {
     "record_type": "sample",
     "image_file": "25_Benign_center2.png",
     "image_name": "25_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.582741916179657,
-    "prob_class_1": 0.417258083820343,
+    "prob_class_0": 0.9974879249930382,
+    "prob_class_1": 0.0025120750069618225,
     "predicted_class": 0,
-    "confidence": 0.582741916179657
+    "confidence": 0.9974879249930382
   },
   {
     "record_type": "sample",
     "image_file": "25_Malignant_center2.png",
     "image_name": "25_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5981770157814026,
-    "prob_class_1": 0.4018229842185974,
-    "predicted_class": 0,
-    "confidence": 0.5981770157814026
+    "prob_class_0": 0.0001310110092163086,
+    "prob_class_1": 0.9998689889907837,
+    "predicted_class": 1,
+    "confidence": 0.9998689889907837
   },
   {
     "record_type": "sample",
     "image_file": "26_Benign_center2.png",
     "image_name": "26_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5946840047836304,
-    "prob_class_1": 0.40531599521636963,
+    "prob_class_0": 0.9965574541129172,
+    "prob_class_1": 0.003442545887082815,
     "predicted_class": 0,
-    "confidence": 0.5946840047836304
+    "confidence": 0.9965574541129172
   },
   {
     "record_type": "sample",
     "image_file": "26_Malignant_center2.png",
     "image_name": "26_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5975802540779114,
-    "prob_class_1": 0.4024197459220886,
-    "predicted_class": 0,
-    "confidence": 0.5975802540779114
+    "prob_class_0": 0.0001443624496459961,
+    "prob_class_1": 0.999855637550354,
+    "predicted_class": 1,
+    "confidence": 0.999855637550354
   },
   {
     "record_type": "sample",
     "image_file": "27_Benign_center2.png",
     "image_name": "27_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5817855894565582,
-    "prob_class_1": 0.4182144105434418,
+    "prob_class_0": 0.9874663734808564,
+    "prob_class_1": 0.012533626519143581,
     "predicted_class": 0,
-    "confidence": 0.5817855894565582
+    "confidence": 0.9874663734808564
   },
   {
     "record_type": "sample",
     "image_file": "27_Malignant_center2.png",
     "image_name": "27_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5930927395820618,
-    "prob_class_1": 0.40690726041793823,
-    "predicted_class": 0,
-    "confidence": 0.5930927395820618
+    "prob_class_0": 0.00016736984252929688,
+    "prob_class_1": 0.9998326301574707,
+    "predicted_class": 1,
+    "confidence": 0.9998326301574707
   },
   {
     "record_type": "sample",
     "image_file": "28_Benign_center2.png",
     "image_name": "28_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5917783975601196,
-    "prob_class_1": 0.40822160243988037,
+    "prob_class_0": 0.9902646215632558,
+    "prob_class_1": 0.009735378436744213,
     "predicted_class": 0,
-    "confidence": 0.5917783975601196
+    "confidence": 0.9902646215632558
   },
   {
     "record_type": "sample",
     "image_file": "28_Malignant_center2.png",
     "image_name": "28_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5969966650009155,
-    "prob_class_1": 0.4030033349990845,
+    "prob_class_0": 0.9926797659136355,
+    "prob_class_1": 0.007320234086364508,
     "predicted_class": 0,
-    "confidence": 0.5969966650009155
+    "confidence": 0.9926797659136355
   },
   {
     "record_type": "sample",
     "image_file": "29_Benign_center2.png",
     "image_name": "29_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5939264297485352,
-    "prob_class_1": 0.40607357025146484,
-    "predicted_class": 0,
-    "confidence": 0.5939264297485352
+    "prob_class_0": 0.00020140409469604492,
+    "prob_class_1": 0.999798595905304,
+    "predicted_class": 1,
+    "confidence": 0.999798595905304
   },
   {
     "record_type": "sample",
     "image_file": "29_Malignant_center2.png",
     "image_name": "29_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5826605260372162,
-    "prob_class_1": 0.4173394739627838,
+    "prob_class_0": 0.9902985906228423,
+    "prob_class_1": 0.009701409377157688,
     "predicted_class": 0,
-    "confidence": 0.5826605260372162
+    "confidence": 0.9902985906228423
   },
   {
     "record_type": "sample",
     "image_file": "2_Benign_center2.png",
     "image_name": "2_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5982036292552948,
-    "prob_class_1": 0.4017963707447052,
+    "prob_class_0": 0.9909935630857944,
+    "prob_class_1": 0.009006436914205551,
     "predicted_class": 0,
-    "confidence": 0.5982036292552948
+    "confidence": 0.9909935630857944
   },
   {
     "record_type": "sample",
     "image_file": "2_Malignant_center2.png",
     "image_name": "2_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5969789326190948,
-    "prob_class_1": 0.40302106738090515,
-    "predicted_class": 0,
-    "confidence": 0.5969789326190948
+    "prob_class_0": 0.00039333105087280273,
+    "prob_class_1": 0.9996066689491272,
+    "predicted_class": 1,
+    "confidence": 0.9996066689491272
   },
   {
     "record_type": "sample",
     "image_file": "30_Benign_center2.png",
     "image_name": "30_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5970448553562164,
-    "prob_class_1": 0.40295514464378357,
-    "predicted_class": 0,
-    "confidence": 0.5970448553562164
+    "prob_class_0": 0.37759608030319214,
+    "prob_class_1": 0.6224039196968079,
+    "predicted_class": 1,
+    "confidence": 0.6224039196968079
   },
   {
     "record_type": "sample",
     "image_file": "30_Malignant_center2.png",
     "image_name": "30_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.596039891242981,
-    "prob_class_1": 0.40396010875701904,
+    "prob_class_0": 0.7947188317775726,
+    "prob_class_1": 0.20528116822242737,
     "predicted_class": 0,
-    "confidence": 0.596039891242981
+    "confidence": 0.7947188317775726
   },
   {
     "record_type": "sample",
     "image_file": "31_Benign_center2.png",
     "image_name": "31_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5743132531642914,
-    "prob_class_1": 0.4256867468357086,
-    "predicted_class": 0,
-    "confidence": 0.5743132531642914
+    "prob_class_0": 0.0006436705589294434,
+    "prob_class_1": 0.9993563294410706,
+    "predicted_class": 1,
+    "confidence": 0.9993563294410706
   },
   {
     "record_type": "sample",
     "image_file": "31_Malignant_center2.png",
     "image_name": "31_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5899495184421539,
-    "prob_class_1": 0.41005048155784607,
+    "prob_class_0": 0.9933704687282443,
+    "prob_class_1": 0.006629531271755695,
     "predicted_class": 0,
-    "confidence": 0.5899495184421539
+    "confidence": 0.9933704687282443
   },
   {
     "record_type": "sample",
     "image_file": "32_Benign_center2.png",
     "image_name": "32_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5782936215400696,
-    "prob_class_1": 0.4217063784599304,
+    "prob_class_0": 0.9955776049755514,
+    "prob_class_1": 0.004422395024448633,
     "predicted_class": 0,
-    "confidence": 0.5782936215400696
+    "confidence": 0.9955776049755514
   },
   {
     "record_type": "sample",
     "image_file": "32_Malignant_center2.png",
     "image_name": "32_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5871769487857819,
-    "prob_class_1": 0.41282305121421814,
-    "predicted_class": 0,
-    "confidence": 0.5871769487857819
+    "prob_class_0": 0.0010211467742919922,
+    "prob_class_1": 0.998978853225708,
+    "predicted_class": 1,
+    "confidence": 0.998978853225708
   },
   {
     "record_type": "sample",
     "image_file": "33_Benign_center2.png",
     "image_name": "33_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.598614901304245,
-    "prob_class_1": 0.401385098695755,
+    "prob_class_0": 0.9954007780179381,
+    "prob_class_1": 0.004599221982061863,
     "predicted_class": 0,
-    "confidence": 0.598614901304245
+    "confidence": 0.9954007780179381
   },
   {
     "record_type": "sample",
     "image_file": "33_Malignant_center2.png",
     "image_name": "33_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5970087349414825,
-    "prob_class_1": 0.40299126505851746,
-    "predicted_class": 0,
-    "confidence": 0.5970087349414825
+    "prob_class_0": 0.00012814998626708984,
+    "prob_class_1": 0.9998718500137329,
+    "predicted_class": 1,
+    "confidence": 0.9998718500137329
   },
   {
     "record_type": "sample",
     "image_file": "34_Benign_center2.png",
     "image_name": "34_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5970234572887421,
-    "prob_class_1": 0.40297654271125793,
-    "predicted_class": 0,
-    "confidence": 0.5970234572887421
+    "prob_class_0": 0.06869775056838989,
+    "prob_class_1": 0.9313022494316101,
+    "predicted_class": 1,
+    "confidence": 0.9313022494316101
   },
   {
     "record_type": "sample",
     "image_file": "34_Malignant_center2.png",
     "image_name": "34_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5908191204071045,
-    "prob_class_1": 0.4091808795928955,
-    "predicted_class": 0,
-    "confidence": 0.5908191204071045
+    "prob_class_0": 0.00016355514526367188,
+    "prob_class_1": 0.9998364448547363,
+    "predicted_class": 1,
+    "confidence": 0.9998364448547363
   },
   {
     "record_type": "sample",
     "image_file": "35_Benign_center2.png",
     "image_name": "35_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5968979001045227,
-    "prob_class_1": 0.4031020998954773,
+    "prob_class_0": 0.9875845136120915,
+    "prob_class_1": 0.012415486387908459,
     "predicted_class": 0,
-    "confidence": 0.5968979001045227
+    "confidence": 0.9875845136120915
   },
   {
     "record_type": "sample",
     "image_file": "35_Malignant_center2.png",
     "image_name": "35_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5938242375850677,
-    "prob_class_1": 0.40617576241493225,
-    "predicted_class": 0,
-    "confidence": 0.5938242375850677
+    "prob_class_0": 0.00011777877807617188,
+    "prob_class_1": 0.9998822212219238,
+    "predicted_class": 1,
+    "confidence": 0.9998822212219238
   },
   {
     "record_type": "sample",
     "image_file": "36_Benign_center2.png",
     "image_name": "36_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5984524488449097,
-    "prob_class_1": 0.40154755115509033,
+    "prob_class_0": 0.9939695200882852,
+    "prob_class_1": 0.006030479911714792,
     "predicted_class": 0,
-    "confidence": 0.5984524488449097
+    "confidence": 0.9939695200882852
   },
   {
     "record_type": "sample",
     "image_file": "36_Malignant_center2.png",
     "image_name": "36_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5756052732467651,
-    "prob_class_1": 0.42439472675323486,
+    "prob_class_0": 0.866444855928421,
+    "prob_class_1": 0.13355514407157898,
     "predicted_class": 0,
-    "confidence": 0.5756052732467651
+    "confidence": 0.866444855928421
   },
   {
     "record_type": "sample",
     "image_file": "37_Benign_center2.png",
     "image_name": "37_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5984002947807312,
-    "prob_class_1": 0.4015997052192688,
+    "prob_class_0": 0.9908246183767915,
+    "prob_class_1": 0.009175381623208523,
     "predicted_class": 0,
-    "confidence": 0.5984002947807312
+    "confidence": 0.9908246183767915
   },
   {
     "record_type": "sample",
     "image_file": "37_Malignant_center2.png",
     "image_name": "37_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5850612223148346,
-    "prob_class_1": 0.4149387776851654,
+    "prob_class_0": 0.9908223375678062,
+    "prob_class_1": 0.009177662432193756,
     "predicted_class": 0,
-    "confidence": 0.5850612223148346
+    "confidence": 0.9908223375678062
   },
   {
     "record_type": "sample",
     "image_file": "38_Benign_center2.png",
     "image_name": "38_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5972543954849243,
-    "prob_class_1": 0.4027456045150757,
+    "prob_class_0": 0.9959551128558815,
+    "prob_class_1": 0.0040448871441185474,
     "predicted_class": 0,
-    "confidence": 0.5972543954849243
+    "confidence": 0.9959551128558815
   },
   {
     "record_type": "sample",
     "image_file": "38_Malignant_center2.png",
     "image_name": "38_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5980449914932251,
-    "prob_class_1": 0.4019550085067749,
-    "predicted_class": 0,
-    "confidence": 0.5980449914932251
+    "prob_class_0": 0.00011479854583740234,
+    "prob_class_1": 0.9998852014541626,
+    "predicted_class": 1,
+    "confidence": 0.9998852014541626
   },
   {
     "record_type": "sample",
     "image_file": "39_Benign_center2.png",
     "image_name": "39_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5739243626594543,
-    "prob_class_1": 0.42607563734054565,
+    "prob_class_0": 0.9973381899762899,
+    "prob_class_1": 0.0026618100237101316,
     "predicted_class": 0,
-    "confidence": 0.5739243626594543
+    "confidence": 0.9973381899762899
   },
   {
     "record_type": "sample",
     "image_file": "39_Malignant_center2.png",
     "image_name": "39_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5989481210708618,
-    "prob_class_1": 0.4010518789291382,
-    "predicted_class": 0,
-    "confidence": 0.5989481210708618
+    "prob_class_0": 0.000102996826171875,
+    "prob_class_1": 0.9998970031738281,
+    "predicted_class": 1,
+    "confidence": 0.9998970031738281
   },
   {
     "record_type": "sample",
     "image_file": "3_Benign_center2.png",
     "image_name": "3_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5770663917064667,
-    "prob_class_1": 0.4229336082935333,
-    "predicted_class": 0,
-    "confidence": 0.5770663917064667
+    "prob_class_0": 0.00013709068298339844,
+    "prob_class_1": 0.9998629093170166,
+    "predicted_class": 1,
+    "confidence": 0.9998629093170166
   },
   {
     "record_type": "sample",
     "image_file": "3_Malignant_center2.png",
     "image_name": "3_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5933127701282501,
-    "prob_class_1": 0.4066872298717499,
-    "predicted_class": 0,
-    "confidence": 0.5933127701282501
+    "prob_class_0": 0.0001614093780517578,
+    "prob_class_1": 0.9998385906219482,
+    "predicted_class": 1,
+    "confidence": 0.9998385906219482
   },
   {
     "record_type": "sample",
     "image_file": "40_Benign_center2.png",
     "image_name": "40_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5969992280006409,
-    "prob_class_1": 0.40300077199935913,
+    "prob_class_0": 0.9863642938435078,
+    "prob_class_1": 0.013635706156492233,
     "predicted_class": 0,
-    "confidence": 0.5969992280006409
+    "confidence": 0.9863642938435078
   },
   {
     "record_type": "sample",
     "image_file": "40_Malignant_center2.png",
     "image_name": "40_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5745423138141632,
-    "prob_class_1": 0.4254576861858368,
-    "predicted_class": 0,
-    "confidence": 0.5745423138141632
+    "prob_class_0": 0.00011336803436279297,
+    "prob_class_1": 0.9998866319656372,
+    "predicted_class": 1,
+    "confidence": 0.9998866319656372
   },
   {
     "record_type": "sample",
     "image_file": "41_Benign_center2.png",
     "image_name": "41_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.595179408788681,
-    "prob_class_1": 0.40482059121131897,
+    "prob_class_0": 0.9892534939572215,
+    "prob_class_1": 0.010746506042778492,
     "predicted_class": 0,
-    "confidence": 0.595179408788681
+    "confidence": 0.9892534939572215
   },
   {
     "record_type": "sample",
     "image_file": "41_Malignant_center2.png",
     "image_name": "41_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5883409678936005,
-    "prob_class_1": 0.41165903210639954,
+    "prob_class_0": 0.9923955881968141,
+    "prob_class_1": 0.00760441180318594,
     "predicted_class": 0,
-    "confidence": 0.5883409678936005
+    "confidence": 0.9923955881968141
   },
   {
     "record_type": "sample",
     "image_file": "42_Benign_center2.png",
     "image_name": "42_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5984641015529633,
-    "prob_class_1": 0.40153589844703674,
+    "prob_class_0": 0.9958804650232196,
+    "prob_class_1": 0.004119534976780415,
     "predicted_class": 0,
-    "confidence": 0.5984641015529633
+    "confidence": 0.9958804650232196
   },
   {
     "record_type": "sample",
     "image_file": "42_Malignant_center2.png",
     "image_name": "42_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5969957411289215,
-    "prob_class_1": 0.4030042588710785,
+    "prob_class_0": 0.7733542770147324,
+    "prob_class_1": 0.22664572298526764,
     "predicted_class": 0,
-    "confidence": 0.5969957411289215
+    "confidence": 0.7733542770147324
   },
   {
     "record_type": "sample",
     "image_file": "43_Benign_center2.png",
     "image_name": "43_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5756213366985321,
-    "prob_class_1": 0.4243786633014679,
+    "prob_class_0": 0.9893129700794816,
+    "prob_class_1": 0.010687029920518398,
     "predicted_class": 0,
-    "confidence": 0.5756213366985321
+    "confidence": 0.9893129700794816
   },
   {
     "record_type": "sample",
     "image_file": "43_Malignant_center2.png",
     "image_name": "43_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5984589755535126,
-    "prob_class_1": 0.4015410244464874,
-    "predicted_class": 0,
-    "confidence": 0.5984589755535126
+    "prob_class_0": 0.0004208683967590332,
+    "prob_class_1": 0.999579131603241,
+    "predicted_class": 1,
+    "confidence": 0.999579131603241
   },
   {
     "record_type": "sample",
     "image_file": "44_Benign_center2.png",
     "image_name": "44_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5976639091968536,
-    "prob_class_1": 0.40233609080314636,
+    "prob_class_0": 0.9958350551314652,
+    "prob_class_1": 0.004164944868534803,
     "predicted_class": 0,
-    "confidence": 0.5976639091968536
+    "confidence": 0.9958350551314652
   },
   {
     "record_type": "sample",
     "image_file": "44_Malignant_center2.png",
     "image_name": "44_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5749165713787079,
-    "prob_class_1": 0.4250834286212921,
+    "prob_class_0": 0.9959021415561438,
+    "prob_class_1": 0.004097858443856239,
     "predicted_class": 0,
-    "confidence": 0.5749165713787079
+    "confidence": 0.9959021415561438
   },
   {
     "record_type": "sample",
     "image_file": "45_Benign_center2.png",
     "image_name": "45_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5971011519432068,
-    "prob_class_1": 0.4028988480567932,
+    "prob_class_0": 0.5005002319812775,
+    "prob_class_1": 0.49949976801872253,
     "predicted_class": 0,
-    "confidence": 0.5971011519432068
+    "confidence": 0.5005002319812775
   },
   {
     "record_type": "sample",
     "image_file": "45_Malignant_center2.png",
     "image_name": "45_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5978590846061707,
-    "prob_class_1": 0.40214091539382935,
-    "predicted_class": 0,
-    "confidence": 0.5978590846061707
+    "prob_class_0": 0.00011897087097167969,
+    "prob_class_1": 0.9998810291290283,
+    "predicted_class": 1,
+    "confidence": 0.9998810291290283
   },
   {
     "record_type": "sample",
     "image_file": "46_Benign_center2.png",
     "image_name": "46_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5930056273937225,
-    "prob_class_1": 0.40699437260627747,
+    "prob_class_0": 0.9922263524495065,
+    "prob_class_1": 0.007773647550493479,
     "predicted_class": 0,
-    "confidence": 0.5930056273937225
+    "confidence": 0.9922263524495065
   },
   {
     "record_type": "sample",
     "image_file": "46_Malignant_center2.png",
     "image_name": "46_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5976867377758026,
-    "prob_class_1": 0.4023132622241974,
+    "prob_class_0": 0.9898751424625516,
+    "prob_class_1": 0.010124857537448406,
     "predicted_class": 0,
-    "confidence": 0.5976867377758026
+    "confidence": 0.9898751424625516
   },
   {
     "record_type": "sample",
     "image_file": "47_Benign_center2.png",
     "image_name": "47_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5962172448635101,
-    "prob_class_1": 0.40378275513648987,
+    "prob_class_0": 0.9702843949198723,
+    "prob_class_1": 0.029715605080127716,
     "predicted_class": 0,
-    "confidence": 0.5962172448635101
+    "confidence": 0.9702843949198723
   },
   {
     "record_type": "sample",
     "image_file": "47_Malignant_center2.png",
     "image_name": "47_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5784247815608978,
-    "prob_class_1": 0.4215752184391022,
+    "prob_class_0": 0.9332964643836021,
+    "prob_class_1": 0.06670353561639786,
     "predicted_class": 0,
-    "confidence": 0.5784247815608978
+    "confidence": 0.9332964643836021
   },
   {
     "record_type": "sample",
     "image_file": "48_Benign_center2.png",
     "image_name": "48_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5917346775531769,
-    "prob_class_1": 0.4082653224468231,
+    "prob_class_0": 0.9868246531113982,
+    "prob_class_1": 0.01317534688860178,
     "predicted_class": 0,
-    "confidence": 0.5917346775531769
+    "confidence": 0.9868246531113982
   },
   {
     "record_type": "sample",
     "image_file": "48_Malignant_center2.png",
     "image_name": "48_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5980917513370514,
-    "prob_class_1": 0.4019082486629486,
+    "prob_class_0": 0.9939920660108328,
+    "prob_class_1": 0.0060079339891672134,
     "predicted_class": 0,
-    "confidence": 0.5980917513370514
+    "confidence": 0.9939920660108328
   },
   {
     "record_type": "sample",
     "image_file": "49_Benign_center2.png",
     "image_name": "49_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5972186923027039,
-    "prob_class_1": 0.40278130769729614,
+    "prob_class_0": 0.9960158686153591,
+    "prob_class_1": 0.003984131384640932,
     "predicted_class": 0,
-    "confidence": 0.5972186923027039
+    "confidence": 0.9960158686153591
   },
   {
     "record_type": "sample",
     "image_file": "49_Malignant_center2.png",
     "image_name": "49_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5949482917785645,
-    "prob_class_1": 0.40505170822143555,
-    "predicted_class": 0,
-    "confidence": 0.5949482917785645
+    "prob_class_0": 0.0008859038352966309,
+    "prob_class_1": 0.9991140961647034,
+    "predicted_class": 1,
+    "confidence": 0.9991140961647034
   },
   {
     "record_type": "sample",
     "image_file": "4_Benign_center2.png",
     "image_name": "4_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5960848033428192,
-    "prob_class_1": 0.4039151966571808,
+    "prob_class_0": 0.9957890855148435,
+    "prob_class_1": 0.004210914485156536,
     "predicted_class": 0,
-    "confidence": 0.5960848033428192
+    "confidence": 0.9957890855148435
   },
   {
     "record_type": "sample",
     "image_file": "4_Malignant_center2.png",
     "image_name": "4_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5965162515640259,
-    "prob_class_1": 0.4034837484359741,
-    "predicted_class": 0,
-    "confidence": 0.5965162515640259
+    "prob_class_0": 0.05795162916183472,
+    "prob_class_1": 0.9420483708381653,
+    "predicted_class": 1,
+    "confidence": 0.9420483708381653
   },
   {
     "record_type": "sample",
     "image_file": "50_Benign_center2.png",
     "image_name": "50_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5973187386989594,
-    "prob_class_1": 0.40268126130104065,
+    "prob_class_0": 0.9937505875714123,
+    "prob_class_1": 0.006249412428587675,
     "predicted_class": 0,
-    "confidence": 0.5973187386989594
+    "confidence": 0.9937505875714123
   },
   {
     "record_type": "sample",
     "image_file": "50_Malignant_center2.png",
     "image_name": "50_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5896995961666107,
-    "prob_class_1": 0.4103004038333893,
+    "prob_class_0": 0.8359832316637039,
+    "prob_class_1": 0.16401676833629608,
     "predicted_class": 0,
-    "confidence": 0.5896995961666107
+    "confidence": 0.8359832316637039
   },
   {
     "record_type": "sample",
     "image_file": "51_Benign_center2.png",
     "image_name": "51_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5979604721069336,
-    "prob_class_1": 0.4020395278930664,
+    "prob_class_0": 0.9872887395322323,
+    "prob_class_1": 0.012711260467767715,
     "predicted_class": 0,
-    "confidence": 0.5979604721069336
+    "confidence": 0.9872887395322323
   },
   {
     "record_type": "sample",
     "image_file": "51_Malignant_center2.png",
     "image_name": "51_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.57703897356987,
-    "prob_class_1": 0.42296102643013,
+    "prob_class_0": 0.9895471427589655,
+    "prob_class_1": 0.010452857241034508,
     "predicted_class": 0,
-    "confidence": 0.57703897356987
+    "confidence": 0.9895471427589655
   },
   {
     "record_type": "sample",
     "image_file": "52_Benign_center2.png",
     "image_name": "52_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5974598526954651,
-    "prob_class_1": 0.4025401473045349,
+    "prob_class_0": 0.9946973812766373,
+    "prob_class_1": 0.005302618723362684,
     "predicted_class": 0,
-    "confidence": 0.5974598526954651
+    "confidence": 0.9946973812766373
   },
   {
     "record_type": "sample",
     "image_file": "52_Malignant_center2.png",
     "image_name": "52_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5746071338653564,
-    "prob_class_1": 0.42539286613464355,
+    "prob_class_0": 0.8783976882696152,
+    "prob_class_1": 0.12160231173038483,
     "predicted_class": 0,
-    "confidence": 0.5746071338653564
+    "confidence": 0.8783976882696152
   },
   {
     "record_type": "sample",
     "image_file": "53_Benign_center2.png",
     "image_name": "53_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5738846957683563,
-    "prob_class_1": 0.4261153042316437,
-    "predicted_class": 0,
-    "confidence": 0.5738846957683563
+    "prob_class_0": 0.000125885009765625,
+    "prob_class_1": 0.9998741149902344,
+    "predicted_class": 1,
+    "confidence": 0.9998741149902344
   },
   {
     "record_type": "sample",
     "image_file": "53_Malignant_center2.png",
     "image_name": "53_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5954720079898834,
-    "prob_class_1": 0.4045279920101166,
+    "prob_class_0": 0.9952069288119674,
+    "prob_class_1": 0.004793071188032627,
     "predicted_class": 0,
-    "confidence": 0.5954720079898834
+    "confidence": 0.9952069288119674
   },
   {
     "record_type": "sample",
     "image_file": "54_Benign_center2.png",
     "image_name": "54_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5932752788066864,
-    "prob_class_1": 0.4067247211933136,
+    "prob_class_0": 0.9964990960434079,
+    "prob_class_1": 0.003500903956592083,
     "predicted_class": 0,
-    "confidence": 0.5932752788066864
+    "confidence": 0.9964990960434079
   },
   {
     "record_type": "sample",
     "image_file": "54_Malignant_center2.png",
     "image_name": "54_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.573955774307251,
-    "prob_class_1": 0.426044225692749,
+    "prob_class_0": 0.9794303011149168,
+    "prob_class_1": 0.0205696988850832,
     "predicted_class": 0,
-    "confidence": 0.573955774307251
+    "confidence": 0.9794303011149168
   },
   {
     "record_type": "sample",
     "image_file": "55_Benign_center2.png",
     "image_name": "55_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5863575041294098,
-    "prob_class_1": 0.4136424958705902,
+    "prob_class_0": 0.9963294460903853,
+    "prob_class_1": 0.003670553909614682,
     "predicted_class": 0,
-    "confidence": 0.5863575041294098
+    "confidence": 0.9963294460903853
   },
   {
     "record_type": "sample",
     "image_file": "55_Malignant_center2.png",
     "image_name": "55_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5746362805366516,
-    "prob_class_1": 0.4253637194633484,
-    "predicted_class": 0,
-    "confidence": 0.5746362805366516
+    "prob_class_0": 0.0001423358917236328,
+    "prob_class_1": 0.9998576641082764,
+    "predicted_class": 1,
+    "confidence": 0.9998576641082764
   },
   {
     "record_type": "sample",
     "image_file": "56_Benign_center2.png",
     "image_name": "56_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5981550216674805,
-    "prob_class_1": 0.40184497833251953,
+    "prob_class_0": 0.8703480511903763,
+    "prob_class_1": 0.12965194880962372,
     "predicted_class": 0,
-    "confidence": 0.5981550216674805
+    "confidence": 0.8703480511903763
   },
   {
     "record_type": "sample",
     "image_file": "56_Malignant_center2.png",
     "image_name": "56_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5920248031616211,
-    "prob_class_1": 0.4079751968383789,
-    "predicted_class": 0,
-    "confidence": 0.5920248031616211
+    "prob_class_0": 0.0001755356788635254,
+    "prob_class_1": 0.9998244643211365,
+    "predicted_class": 1,
+    "confidence": 0.9998244643211365
   },
   {
     "record_type": "sample",
     "image_file": "57_Benign_center2.png",
     "image_name": "57_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5874828100204468,
-    "prob_class_1": 0.4125171899795532,
+    "prob_class_0": 0.994499325286597,
+    "prob_class_1": 0.0055006747134029865,
     "predicted_class": 0,
-    "confidence": 0.5874828100204468
+    "confidence": 0.994499325286597
   },
   {
     "record_type": "sample",
     "image_file": "57_Malignant_center2.png",
     "image_name": "57_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5740238428115845,
-    "prob_class_1": 0.4259761571884155,
+    "prob_class_0": 0.9922909452579916,
+    "prob_class_1": 0.007709054742008448,
     "predicted_class": 0,
-    "confidence": 0.5740238428115845
+    "confidence": 0.9922909452579916
   },
   {
     "record_type": "sample",
     "image_file": "58_Benign_center2.png",
     "image_name": "58_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5964424014091492,
-    "prob_class_1": 0.40355759859085083,
-    "predicted_class": 0,
-    "confidence": 0.5964424014091492
+    "prob_class_0": 0.00013136863708496094,
+    "prob_class_1": 0.999868631362915,
+    "predicted_class": 1,
+    "confidence": 0.999868631362915
   },
   {
     "record_type": "sample",
     "image_file": "58_Malignant_center2.png",
     "image_name": "58_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5982559025287628,
-    "prob_class_1": 0.4017440974712372,
-    "predicted_class": 0,
-    "confidence": 0.5982559025287628
+    "prob_class_0": 0.41477495431900024,
+    "prob_class_1": 0.5852250456809998,
+    "predicted_class": 1,
+    "confidence": 0.5852250456809998
   },
   {
     "record_type": "sample",
     "image_file": "59_Benign_center2.png",
     "image_name": "59_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5952692329883575,
-    "prob_class_1": 0.40473076701164246,
+    "prob_class_0": 0.9952207603491843,
+    "prob_class_1": 0.004779239650815725,
     "predicted_class": 0,
-    "confidence": 0.5952692329883575
+    "confidence": 0.9952207603491843
   },
   {
     "record_type": "sample",
     "image_file": "59_Malignant_center2.png",
     "image_name": "59_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.591581791639328,
-    "prob_class_1": 0.408418208360672,
+    "prob_class_0": 0.965127732604742,
+    "prob_class_1": 0.03487226739525795,
     "predicted_class": 0,
-    "confidence": 0.591581791639328
+    "confidence": 0.965127732604742
   },
   {
     "record_type": "sample",
     "image_file": "5_Benign_center2.png",
     "image_name": "5_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5961029231548309,
-    "prob_class_1": 0.40389707684516907,
+    "prob_class_0": 0.9874027734622359,
+    "prob_class_1": 0.012597226537764072,
     "predicted_class": 0,
-    "confidence": 0.5961029231548309
+    "confidence": 0.9874027734622359
   },
   {
     "record_type": "sample",
     "image_file": "5_Malignant_center2.png",
     "image_name": "5_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5938047468662262,
-    "prob_class_1": 0.4061952531337738,
-    "predicted_class": 0,
-    "confidence": 0.5938047468662262
+    "prob_class_0": 0.0001100301742553711,
+    "prob_class_1": 0.9998899698257446,
+    "predicted_class": 1,
+    "confidence": 0.9998899698257446
   },
   {
     "record_type": "sample",
     "image_file": "60_Benign_center2.png",
     "image_name": "60_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5945005416870117,
-    "prob_class_1": 0.4054994583129883,
-    "predicted_class": 0,
-    "confidence": 0.5945005416870117
+    "prob_class_0": 0.00019675493240356445,
+    "prob_class_1": 0.9998032450675964,
+    "predicted_class": 1,
+    "confidence": 0.9998032450675964
   },
   {
     "record_type": "sample",
     "image_file": "60_Malignant_center2.png",
     "image_name": "60_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5741486847400665,
-    "prob_class_1": 0.42585131525993347,
-    "predicted_class": 0,
-    "confidence": 0.5741486847400665
+    "prob_class_0": 0.05585557222366333,
+    "prob_class_1": 0.9441444277763367,
+    "predicted_class": 1,
+    "confidence": 0.9441444277763367
   },
   {
     "record_type": "sample",
     "image_file": "61_Benign_center2.png",
     "image_name": "61_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5923413932323456,
-    "prob_class_1": 0.4076586067676544,
+    "prob_class_0": 0.9866181975230575,
+    "prob_class_1": 0.01338180247694254,
     "predicted_class": 0,
-    "confidence": 0.5923413932323456
+    "confidence": 0.9866181975230575
   },
   {
     "record_type": "sample",
     "image_file": "61_Malignant_center2.png",
     "image_name": "61_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5898646712303162,
-    "prob_class_1": 0.41013532876968384,
+    "prob_class_0": 0.9901810316368937,
+    "prob_class_1": 0.00981896836310625,
     "predicted_class": 0,
-    "confidence": 0.5898646712303162
+    "confidence": 0.9901810316368937
   },
   {
     "record_type": "sample",
     "image_file": "62_Benign_center2.png",
     "image_name": "62_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5772602260112762,
-    "prob_class_1": 0.42273977398872375,
+    "prob_class_0": 0.9946835627779365,
+    "prob_class_1": 0.005316437222063541,
     "predicted_class": 0,
-    "confidence": 0.5772602260112762
+    "confidence": 0.9946835627779365
   },
   {
     "record_type": "sample",
     "image_file": "62_Malignant_center2.png",
     "image_name": "62_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5976111590862274,
-    "prob_class_1": 0.4023888409137726,
-    "predicted_class": 0,
-    "confidence": 0.5976111590862274
+    "prob_class_0": 0.0002452731132507324,
+    "prob_class_1": 0.9997547268867493,
+    "predicted_class": 1,
+    "confidence": 0.9997547268867493
   },
   {
     "record_type": "sample",
     "image_file": "63_Benign_center2.png",
     "image_name": "63_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5981955528259277,
-    "prob_class_1": 0.40180444717407227,
+    "prob_class_0": 0.991397206671536,
+    "prob_class_1": 0.008602793328464031,
     "predicted_class": 0,
-    "confidence": 0.5981955528259277
+    "confidence": 0.991397206671536
   },
   {
     "record_type": "sample",
     "image_file": "63_Malignant_center2.png",
     "image_name": "63_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5744939744472504,
-    "prob_class_1": 0.42550602555274963,
-    "predicted_class": 0,
-    "confidence": 0.5744939744472504
+    "prob_class_0": 0.00011813640594482422,
+    "prob_class_1": 0.9998818635940552,
+    "predicted_class": 1,
+    "confidence": 0.9998818635940552
   },
   {
     "record_type": "sample",
     "image_file": "64_Benign_center2.png",
     "image_name": "64_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.590794026851654,
-    "prob_class_1": 0.40920597314834595,
+    "prob_class_0": 0.9814894739538431,
+    "prob_class_1": 0.018510526046156883,
     "predicted_class": 0,
-    "confidence": 0.590794026851654
+    "confidence": 0.9814894739538431
   },
   {
     "record_type": "sample",
     "image_file": "64_Malignant_center2.png",
     "image_name": "64_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.576123058795929,
-    "prob_class_1": 0.42387694120407104,
+    "prob_class_0": 0.9949681665748358,
+    "prob_class_1": 0.005031833425164223,
     "predicted_class": 0,
-    "confidence": 0.576123058795929
+    "confidence": 0.9949681665748358
   },
   {
     "record_type": "sample",
     "image_file": "65_Benign_center2.png",
     "image_name": "65_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5980913639068604,
-    "prob_class_1": 0.40190863609313965,
+    "prob_class_0": 0.9807418659329414,
+    "prob_class_1": 0.019258134067058563,
     "predicted_class": 0,
-    "confidence": 0.5980913639068604
+    "confidence": 0.9807418659329414
   },
   {
     "record_type": "sample",
     "image_file": "65_Malignant_center2.png",
     "image_name": "65_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5981719195842743,
-    "prob_class_1": 0.4018280804157257,
-    "predicted_class": 0,
-    "confidence": 0.5981719195842743
+    "prob_class_0": 0.00011408329010009766,
+    "prob_class_1": 0.9998859167098999,
+    "predicted_class": 1,
+    "confidence": 0.9998859167098999
   },
   {
     "record_type": "sample",
     "image_file": "66_Benign_center2.png",
     "image_name": "66_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5952865183353424,
-    "prob_class_1": 0.4047134816646576,
+    "prob_class_0": 0.9899440053850412,
+    "prob_class_1": 0.010055994614958763,
     "predicted_class": 0,
-    "confidence": 0.5952865183353424
+    "confidence": 0.9899440053850412
   },
   {
     "record_type": "sample",
     "image_file": "66_Malignant_center2.png",
     "image_name": "66_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5991147756576538,
-    "prob_class_1": 0.4008852243423462,
+    "prob_class_0": 0.9702880587428808,
+    "prob_class_1": 0.02971194125711918,
     "predicted_class": 0,
-    "confidence": 0.5991147756576538
+    "confidence": 0.9702880587428808
   },
   {
     "record_type": "sample",
     "image_file": "67_Benign_center2.png",
     "image_name": "67_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5828303396701813,
-    "prob_class_1": 0.4171696603298187,
-    "predicted_class": 0,
-    "confidence": 0.5828303396701813
+    "prob_class_0": 0.00011670589447021484,
+    "prob_class_1": 0.9998832941055298,
+    "predicted_class": 1,
+    "confidence": 0.9998832941055298
   },
   {
     "record_type": "sample",
     "image_file": "67_Malignant_center2.png",
     "image_name": "67_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5985473394393921,
-    "prob_class_1": 0.4014526605606079,
+    "prob_class_0": 0.9946329812519252,
+    "prob_class_1": 0.00536701874807477,
     "predicted_class": 0,
-    "confidence": 0.5985473394393921
+    "confidence": 0.9946329812519252
   },
   {
     "record_type": "sample",
     "image_file": "68_Benign_center2.png",
     "image_name": "68_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5949967503547668,
-    "prob_class_1": 0.40500324964523315,
+    "prob_class_0": 0.9942466858774424,
+    "prob_class_1": 0.00575331412255764,
     "predicted_class": 0,
-    "confidence": 0.5949967503547668
+    "confidence": 0.9942466858774424
   },
   {
     "record_type": "sample",
     "image_file": "68_Malignant_center2.png",
     "image_name": "68_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5975537300109863,
-    "prob_class_1": 0.40244626998901367,
+    "prob_class_0": 0.9527835324406624,
+    "prob_class_1": 0.047216467559337616,
     "predicted_class": 0,
-    "confidence": 0.5975537300109863
+    "confidence": 0.9527835324406624
   },
   {
     "record_type": "sample",
     "image_file": "69_Benign_center2.png",
     "image_name": "69_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5986661314964294,
-    "prob_class_1": 0.40133386850357056,
-    "predicted_class": 0,
-    "confidence": 0.5986661314964294
+    "prob_class_0": 0.00015652179718017578,
+    "prob_class_1": 0.9998434782028198,
+    "predicted_class": 1,
+    "confidence": 0.9998434782028198
   },
   {
     "record_type": "sample",
     "image_file": "69_Malignant_center2.png",
     "image_name": "69_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5984291434288025,
-    "prob_class_1": 0.4015708565711975,
-    "predicted_class": 0,
-    "confidence": 0.5984291434288025
+    "prob_class_0": 0.0008436441421508789,
+    "prob_class_1": 0.9991563558578491,
+    "predicted_class": 1,
+    "confidence": 0.9991563558578491
   },
   {
     "record_type": "sample",
     "image_file": "6_Benign_center2.png",
     "image_name": "6_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.578460305929184,
-    "prob_class_1": 0.42153969407081604,
+    "prob_class_0": 0.9969165467191488,
+    "prob_class_1": 0.003083453280851245,
     "predicted_class": 0,
-    "confidence": 0.578460305929184
+    "confidence": 0.9969165467191488
   },
   {
     "record_type": "sample",
     "image_file": "6_Malignant_center2.png",
     "image_name": "6_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5978192389011383,
-    "prob_class_1": 0.4021807610988617,
-    "predicted_class": 0,
-    "confidence": 0.5978192389011383
+    "prob_class_0": 0.00010895729064941406,
+    "prob_class_1": 0.9998910427093506,
+    "predicted_class": 1,
+    "confidence": 0.9998910427093506
   },
   {
     "record_type": "sample",
     "image_file": "70_Benign_center2.png",
     "image_name": "70_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5972611904144287,
-    "prob_class_1": 0.4027388095855713,
-    "predicted_class": 0,
-    "confidence": 0.5972611904144287
+    "prob_class_0": 0.00011134147644042969,
+    "prob_class_1": 0.9998886585235596,
+    "predicted_class": 1,
+    "confidence": 0.9998886585235596
   },
   {
     "record_type": "sample",
     "image_file": "70_Malignant_center2.png",
     "image_name": "70_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5828834772109985,
-    "prob_class_1": 0.41711652278900146,
-    "predicted_class": 0,
-    "confidence": 0.5828834772109985
+    "prob_class_0": 0.00013124942779541016,
+    "prob_class_1": 0.9998687505722046,
+    "predicted_class": 1,
+    "confidence": 0.9998687505722046
   },
   {
     "record_type": "sample",
     "image_file": "71_Benign_center2.png",
     "image_name": "71_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.57694873213768,
-    "prob_class_1": 0.42305126786231995,
+    "prob_class_0": 0.9973192261531949,
+    "prob_class_1": 0.0026807738468050957,
     "predicted_class": 0,
-    "confidence": 0.57694873213768
+    "confidence": 0.9973192261531949
   },
   {
     "record_type": "sample",
     "image_file": "71_Malignant_center2.png",
     "image_name": "71_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5744847357273102,
-    "prob_class_1": 0.4255152642726898,
+    "prob_class_0": 0.9953013602644205,
+    "prob_class_1": 0.004698639735579491,
     "predicted_class": 0,
-    "confidence": 0.5744847357273102
+    "confidence": 0.9953013602644205
   },
   {
     "record_type": "sample",
     "image_file": "72_Benign_center2.png",
     "image_name": "72_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5744116902351379,
-    "prob_class_1": 0.42558830976486206,
+    "prob_class_0": 0.9960812474600971,
+    "prob_class_1": 0.0039187525399029255,
     "predicted_class": 0,
-    "confidence": 0.5744116902351379
+    "confidence": 0.9960812474600971
   },
   {
     "record_type": "sample",
     "image_file": "72_Malignant_center2.png",
     "image_name": "72_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.58811816573143,
-    "prob_class_1": 0.41188183426856995,
-    "predicted_class": 0,
-    "confidence": 0.58811816573143
+    "prob_class_0": 0.00016438961029052734,
+    "prob_class_1": 0.9998356103897095,
+    "predicted_class": 1,
+    "confidence": 0.9998356103897095
   },
   {
     "record_type": "sample",
     "image_file": "73_Benign_center2.png",
     "image_name": "73_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5962004661560059,
-    "prob_class_1": 0.40379953384399414,
-    "predicted_class": 0,
-    "confidence": 0.5962004661560059
+    "prob_class_0": 0.0001442432403564453,
+    "prob_class_1": 0.9998557567596436,
+    "predicted_class": 1,
+    "confidence": 0.9998557567596436
   },
   {
     "record_type": "sample",
     "image_file": "73_Malignant_center2.png",
     "image_name": "73_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5983845293521881,
-    "prob_class_1": 0.4016154706478119,
-    "predicted_class": 0,
-    "confidence": 0.5983845293521881
+    "prob_class_0": 0.0001418590545654297,
+    "prob_class_1": 0.9998581409454346,
+    "predicted_class": 1,
+    "confidence": 0.9998581409454346
   },
   {
     "record_type": "sample",
     "image_file": "74_Benign_center2.png",
     "image_name": "74_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5882955491542816,
-    "prob_class_1": 0.4117044508457184,
+    "prob_class_0": 0.904357485473156,
+    "prob_class_1": 0.09564251452684402,
     "predicted_class": 0,
-    "confidence": 0.5882955491542816
+    "confidence": 0.904357485473156
   },
   {
     "record_type": "sample",
     "image_file": "74_Malignant_center2.png",
     "image_name": "74_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5892807841300964,
-    "prob_class_1": 0.41071921586990356,
+    "prob_class_0": 0.9955702405422926,
+    "prob_class_1": 0.004429759457707405,
     "predicted_class": 0,
-    "confidence": 0.5892807841300964
+    "confidence": 0.9955702405422926
   },
   {
     "record_type": "sample",
     "image_file": "75_Benign_center2.png",
     "image_name": "75_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5985520482063293,
-    "prob_class_1": 0.40144795179367065,
+    "prob_class_0": 0.9841153062880039,
+    "prob_class_1": 0.01588469371199608,
     "predicted_class": 0,
-    "confidence": 0.5985520482063293
+    "confidence": 0.9841153062880039
   },
   {
     "record_type": "sample",
     "image_file": "75_Malignant_center2.png",
     "image_name": "75_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5984616279602051,
-    "prob_class_1": 0.4015383720397949,
+    "prob_class_0": 0.9865658450871706,
+    "prob_class_1": 0.013434154912829399,
     "predicted_class": 0,
-    "confidence": 0.5984616279602051
+    "confidence": 0.9865658450871706
   },
   {
     "record_type": "sample",
     "image_file": "76_Benign_center2.png",
     "image_name": "76_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5979993939399719,
-    "prob_class_1": 0.4020006060600281,
+    "prob_class_0": 0.9974053974729031,
+    "prob_class_1": 0.0025946025270968676,
     "predicted_class": 0,
-    "confidence": 0.5979993939399719
+    "confidence": 0.9974053974729031
   },
   {
     "record_type": "sample",
     "image_file": "76_Malignant_center2.png",
     "image_name": "76_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5932755768299103,
-    "prob_class_1": 0.4067244231700897,
+    "prob_class_0": 0.9943512068130076,
+    "prob_class_1": 0.005648793186992407,
     "predicted_class": 0,
-    "confidence": 0.5932755768299103
+    "confidence": 0.9943512068130076
   },
   {
     "record_type": "sample",
     "image_file": "77_Malignant_center2.png",
     "image_name": "77_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5973201990127563,
-    "prob_class_1": 0.40267980098724365,
+    "prob_class_0": 0.9912671195343137,
+    "prob_class_1": 0.008732880465686321,
     "predicted_class": 0,
-    "confidence": 0.5973201990127563
+    "confidence": 0.9912671195343137
   },
   {
     "record_type": "sample",
     "image_file": "78_Malignant_center2.png",
     "image_name": "78_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5962206423282623,
-    "prob_class_1": 0.40377935767173767,
+    "prob_class_0": 0.9903127811849117,
+    "prob_class_1": 0.009687218815088272,
     "predicted_class": 0,
-    "confidence": 0.5962206423282623
+    "confidence": 0.9903127811849117
   },
   {
     "record_type": "sample",
     "image_file": "79_Malignant_center2.png",
     "image_name": "79_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5827919840812683,
-    "prob_class_1": 0.4172080159187317,
+    "prob_class_0": 0.9827652685344219,
+    "prob_class_1": 0.01723473146557808,
     "predicted_class": 0,
-    "confidence": 0.5827919840812683
+    "confidence": 0.9827652685344219
   },
   {
     "record_type": "sample",
     "image_file": "7_Benign_center2.png",
     "image_name": "7_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5885134041309357,
-    "prob_class_1": 0.41148659586906433,
-    "predicted_class": 0,
-    "confidence": 0.5885134041309357
+    "prob_class_0": 0.0001589059829711914,
+    "prob_class_1": 0.9998410940170288,
+    "predicted_class": 1,
+    "confidence": 0.9998410940170288
   },
   {
     "record_type": "sample",
     "image_file": "7_Malignant_center2.png",
     "image_name": "7_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5975411236286163,
-    "prob_class_1": 0.40245887637138367,
-    "predicted_class": 0,
-    "confidence": 0.5975411236286163
+    "prob_class_0": 0.035229504108428955,
+    "prob_class_1": 0.964770495891571,
+    "predicted_class": 1,
+    "confidence": 0.964770495891571
   },
   {
     "record_type": "sample",
     "image_file": "80_Malignant_center2.png",
     "image_name": "80_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5984599888324738,
-    "prob_class_1": 0.40154001116752625,
-    "predicted_class": 0,
-    "confidence": 0.5984599888324738
+    "prob_class_0": 0.00011742115020751953,
+    "prob_class_1": 0.9998825788497925,
+    "predicted_class": 1,
+    "confidence": 0.9998825788497925
   },
   {
     "record_type": "sample",
     "image_file": "81_Malignant_center2.png",
     "image_name": "81_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.577812135219574,
-    "prob_class_1": 0.422187864780426,
-    "predicted_class": 0,
-    "confidence": 0.577812135219574
+    "prob_class_0": 0.00012183189392089844,
+    "prob_class_1": 0.9998781681060791,
+    "predicted_class": 1,
+    "confidence": 0.9998781681060791
   },
   {
     "record_type": "sample",
     "image_file": "82_Malignant_center2.png",
     "image_name": "82_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5983835458755493,
-    "prob_class_1": 0.4016164541244507,
+    "prob_class_0": 0.9716421607881784,
+    "prob_class_1": 0.028357839211821556,
     "predicted_class": 0,
-    "confidence": 0.5983835458755493
+    "confidence": 0.9716421607881784
   },
   {
     "record_type": "sample",
     "image_file": "8_Benign_center2.png",
     "image_name": "8_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5834939777851105,
-    "prob_class_1": 0.4165060222148895,
+    "prob_class_0": 0.9965080306865275,
+    "prob_class_1": 0.0034919693134725094,
     "predicted_class": 0,
-    "confidence": 0.5834939777851105
+    "confidence": 0.9965080306865275
   },
   {
     "record_type": "sample",
     "image_file": "8_Malignant_center2.png",
     "image_name": "8_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.594344824552536,
-    "prob_class_1": 0.405655175447464,
-    "predicted_class": 0,
-    "confidence": 0.594344824552536
+    "prob_class_0": 0.0001163482666015625,
+    "prob_class_1": 0.9998836517333984,
+    "predicted_class": 1,
+    "confidence": 0.9998836517333984
   },
   {
     "record_type": "sample",
     "image_file": "9_Benign_center2.png",
     "image_name": "9_Benign_center2.png",
     "true_label": 0,
-    "prob_class_0": 0.5960395336151123,
-    "prob_class_1": 0.4039604663848877,
-    "predicted_class": 0,
-    "confidence": 0.5960395336151123
+    "prob_class_0": 0.00012028217315673828,
+    "prob_class_1": 0.9998797178268433,
+    "predicted_class": 1,
+    "confidence": 0.9998797178268433
   },
   {
     "record_type": "sample",
     "image_file": "9_Malignant_center2.png",
     "image_name": "9_Malignant_center2.png",
     "true_label": 1,
-    "prob_class_0": 0.5959880650043488,
-    "prob_class_1": 0.40401193499565125,
+    "prob_class_0": 0.9903130466118455,
+    "prob_class_1": 0.009686953388154507,
     "predicted_class": 0,
-    "confidence": 0.5959880650043488
+    "confidence": 0.9903130466118455
   }
 ]
