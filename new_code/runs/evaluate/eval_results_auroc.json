@@ -1,0 +1,1582 @@
+[
+  {
+    "record_type": "sample",
+    "image_file": "10_Benign_center2.png",
+    "image_name": "10_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5983210504055023,
+    "prob_class_1": 0.4016789495944977,
+    "predicted_class": 0,
+    "confidence": 0.5983210504055023
+  },
+  {
+    "record_type": "sample",
+    "image_file": "10_Malignant_center2.png",
+    "image_name": "10_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5985239744186401,
+    "prob_class_1": 0.40147602558135986,
+    "predicted_class": 0,
+    "confidence": 0.5985239744186401
+  },
+  {
+    "record_type": "sample",
+    "image_file": "11_Benign_center2.png",
+    "image_name": "11_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5916692614555359,
+    "prob_class_1": 0.4083307385444641,
+    "predicted_class": 0,
+    "confidence": 0.5916692614555359
+  },
+  {
+    "record_type": "sample",
+    "image_file": "11_Malignant_center2.png",
+    "image_name": "11_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5955302119255066,
+    "prob_class_1": 0.4044697880744934,
+    "predicted_class": 0,
+    "confidence": 0.5955302119255066
+  },
+  {
+    "record_type": "sample",
+    "image_file": "12_Benign_center2.png",
+    "image_name": "12_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5842227935791016,
+    "prob_class_1": 0.41577720642089844,
+    "predicted_class": 0,
+    "confidence": 0.5842227935791016
+  },
+  {
+    "record_type": "sample",
+    "image_file": "12_Malignant_center2.png",
+    "image_name": "12_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.598209947347641,
+    "prob_class_1": 0.401790052652359,
+    "predicted_class": 0,
+    "confidence": 0.598209947347641
+  },
+  {
+    "record_type": "sample",
+    "image_file": "13_Benign_center2.png",
+    "image_name": "13_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5958219170570374,
+    "prob_class_1": 0.40417808294296265,
+    "predicted_class": 0,
+    "confidence": 0.5958219170570374
+  },
+  {
+    "record_type": "sample",
+    "image_file": "13_Malignant_center2.png",
+    "image_name": "13_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5959242284297943,
+    "prob_class_1": 0.4040757715702057,
+    "predicted_class": 0,
+    "confidence": 0.5959242284297943
+  },
+  {
+    "record_type": "sample",
+    "image_file": "14_Benign_center2.png",
+    "image_name": "14_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.580951601266861,
+    "prob_class_1": 0.41904839873313904,
+    "predicted_class": 0,
+    "confidence": 0.580951601266861
+  },
+  {
+    "record_type": "sample",
+    "image_file": "14_Malignant_center2.png",
+    "image_name": "14_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5964187979698181,
+    "prob_class_1": 0.4035812020301819,
+    "predicted_class": 0,
+    "confidence": 0.5964187979698181
+  },
+  {
+    "record_type": "sample",
+    "image_file": "15_Benign_center2.png",
+    "image_name": "15_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5956071615219116,
+    "prob_class_1": 0.4043928384780884,
+    "predicted_class": 0,
+    "confidence": 0.5956071615219116
+  },
+  {
+    "record_type": "sample",
+    "image_file": "15_Malignant_center2.png",
+    "image_name": "15_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5986202955245972,
+    "prob_class_1": 0.40137970447540283,
+    "predicted_class": 0,
+    "confidence": 0.5986202955245972
+  },
+  {
+    "record_type": "sample",
+    "image_file": "16_Benign_center2.png",
+    "image_name": "16_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5949633121490479,
+    "prob_class_1": 0.40503668785095215,
+    "predicted_class": 0,
+    "confidence": 0.5949633121490479
+  },
+  {
+    "record_type": "sample",
+    "image_file": "16_Malignant_center2.png",
+    "image_name": "16_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5950039923191071,
+    "prob_class_1": 0.40499600768089294,
+    "predicted_class": 0,
+    "confidence": 0.5950039923191071
+  },
+  {
+    "record_type": "sample",
+    "image_file": "17_Benign_center2.png",
+    "image_name": "17_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5803502202033997,
+    "prob_class_1": 0.41964977979660034,
+    "predicted_class": 0,
+    "confidence": 0.5803502202033997
+  },
+  {
+    "record_type": "sample",
+    "image_file": "17_Malignant_center2.png",
+    "image_name": "17_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5918995440006256,
+    "prob_class_1": 0.4081004559993744,
+    "predicted_class": 0,
+    "confidence": 0.5918995440006256
+  },
+  {
+    "record_type": "sample",
+    "image_file": "18_Benign_center2.png",
+    "image_name": "18_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5839582681655884,
+    "prob_class_1": 0.4160417318344116,
+    "predicted_class": 0,
+    "confidence": 0.5839582681655884
+  },
+  {
+    "record_type": "sample",
+    "image_file": "18_Malignant_center2.png",
+    "image_name": "18_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5903438329696655,
+    "prob_class_1": 0.4096561670303345,
+    "predicted_class": 0,
+    "confidence": 0.5903438329696655
+  },
+  {
+    "record_type": "sample",
+    "image_file": "19_Benign_center2.png",
+    "image_name": "19_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5961830317974091,
+    "prob_class_1": 0.40381696820259094,
+    "predicted_class": 0,
+    "confidence": 0.5961830317974091
+  },
+  {
+    "record_type": "sample",
+    "image_file": "19_Malignant_center2.png",
+    "image_name": "19_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.597668319940567,
+    "prob_class_1": 0.402331680059433,
+    "predicted_class": 0,
+    "confidence": 0.597668319940567
+  },
+  {
+    "record_type": "sample",
+    "image_file": "1_Benign_center2.png",
+    "image_name": "1_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5980656743049622,
+    "prob_class_1": 0.40193432569503784,
+    "predicted_class": 0,
+    "confidence": 0.5980656743049622
+  },
+  {
+    "record_type": "sample",
+    "image_file": "1_Malignant_center2.png",
+    "image_name": "1_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5986184477806091,
+    "prob_class_1": 0.40138155221939087,
+    "predicted_class": 0,
+    "confidence": 0.5986184477806091
+  },
+  {
+    "record_type": "sample",
+    "image_file": "20_Benign_center2.png",
+    "image_name": "20_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5941436290740967,
+    "prob_class_1": 0.4058563709259033,
+    "predicted_class": 0,
+    "confidence": 0.5941436290740967
+  },
+  {
+    "record_type": "sample",
+    "image_file": "20_Malignant_center2.png",
+    "image_name": "20_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5932157039642334,
+    "prob_class_1": 0.4067842960357666,
+    "predicted_class": 0,
+    "confidence": 0.5932157039642334
+  },
+  {
+    "record_type": "sample",
+    "image_file": "21_Benign_center2.png",
+    "image_name": "21_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.596843957901001,
+    "prob_class_1": 0.403156042098999,
+    "predicted_class": 0,
+    "confidence": 0.596843957901001
+  },
+  {
+    "record_type": "sample",
+    "image_file": "21_Malignant_center2.png",
+    "image_name": "21_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5806767642498016,
+    "prob_class_1": 0.41932323575019836,
+    "predicted_class": 0,
+    "confidence": 0.5806767642498016
+  },
+  {
+    "record_type": "sample",
+    "image_file": "22_Benign_center2.png",
+    "image_name": "22_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.594207227230072,
+    "prob_class_1": 0.405792772769928,
+    "predicted_class": 0,
+    "confidence": 0.594207227230072
+  },
+  {
+    "record_type": "sample",
+    "image_file": "22_Malignant_center2.png",
+    "image_name": "22_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5897894501686096,
+    "prob_class_1": 0.4102105498313904,
+    "predicted_class": 0,
+    "confidence": 0.5897894501686096
+  },
+  {
+    "record_type": "sample",
+    "image_file": "23_Benign_center2.png",
+    "image_name": "23_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5970827639102936,
+    "prob_class_1": 0.4029172360897064,
+    "predicted_class": 0,
+    "confidence": 0.5970827639102936
+  },
+  {
+    "record_type": "sample",
+    "image_file": "23_Malignant_center2.png",
+    "image_name": "23_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5983339250087738,
+    "prob_class_1": 0.4016660749912262,
+    "predicted_class": 0,
+    "confidence": 0.5983339250087738
+  },
+  {
+    "record_type": "sample",
+    "image_file": "24_Benign_center2.png",
+    "image_name": "24_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5927082002162933,
+    "prob_class_1": 0.40729179978370667,
+    "predicted_class": 0,
+    "confidence": 0.5927082002162933
+  },
+  {
+    "record_type": "sample",
+    "image_file": "24_Malignant_center2.png",
+    "image_name": "24_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5967141091823578,
+    "prob_class_1": 0.4032858908176422,
+    "predicted_class": 0,
+    "confidence": 0.5967141091823578
+  },
+  {
+    "record_type": "sample",
+    "image_file": "25_Benign_center2.png",
+    "image_name": "25_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.582741916179657,
+    "prob_class_1": 0.417258083820343,
+    "predicted_class": 0,
+    "confidence": 0.582741916179657
+  },
+  {
+    "record_type": "sample",
+    "image_file": "25_Malignant_center2.png",
+    "image_name": "25_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5981770157814026,
+    "prob_class_1": 0.4018229842185974,
+    "predicted_class": 0,
+    "confidence": 0.5981770157814026
+  },
+  {
+    "record_type": "sample",
+    "image_file": "26_Benign_center2.png",
+    "image_name": "26_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5946840047836304,
+    "prob_class_1": 0.40531599521636963,
+    "predicted_class": 0,
+    "confidence": 0.5946840047836304
+  },
+  {
+    "record_type": "sample",
+    "image_file": "26_Malignant_center2.png",
+    "image_name": "26_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5975802540779114,
+    "prob_class_1": 0.4024197459220886,
+    "predicted_class": 0,
+    "confidence": 0.5975802540779114
+  },
+  {
+    "record_type": "sample",
+    "image_file": "27_Benign_center2.png",
+    "image_name": "27_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5817855894565582,
+    "prob_class_1": 0.4182144105434418,
+    "predicted_class": 0,
+    "confidence": 0.5817855894565582
+  },
+  {
+    "record_type": "sample",
+    "image_file": "27_Malignant_center2.png",
+    "image_name": "27_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5930927395820618,
+    "prob_class_1": 0.40690726041793823,
+    "predicted_class": 0,
+    "confidence": 0.5930927395820618
+  },
+  {
+    "record_type": "sample",
+    "image_file": "28_Benign_center2.png",
+    "image_name": "28_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5917783975601196,
+    "prob_class_1": 0.40822160243988037,
+    "predicted_class": 0,
+    "confidence": 0.5917783975601196
+  },
+  {
+    "record_type": "sample",
+    "image_file": "28_Malignant_center2.png",
+    "image_name": "28_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5969966650009155,
+    "prob_class_1": 0.4030033349990845,
+    "predicted_class": 0,
+    "confidence": 0.5969966650009155
+  },
+  {
+    "record_type": "sample",
+    "image_file": "29_Benign_center2.png",
+    "image_name": "29_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5939264297485352,
+    "prob_class_1": 0.40607357025146484,
+    "predicted_class": 0,
+    "confidence": 0.5939264297485352
+  },
+  {
+    "record_type": "sample",
+    "image_file": "29_Malignant_center2.png",
+    "image_name": "29_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5826605260372162,
+    "prob_class_1": 0.4173394739627838,
+    "predicted_class": 0,
+    "confidence": 0.5826605260372162
+  },
+  {
+    "record_type": "sample",
+    "image_file": "2_Benign_center2.png",
+    "image_name": "2_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5982036292552948,
+    "prob_class_1": 0.4017963707447052,
+    "predicted_class": 0,
+    "confidence": 0.5982036292552948
+  },
+  {
+    "record_type": "sample",
+    "image_file": "2_Malignant_center2.png",
+    "image_name": "2_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5969789326190948,
+    "prob_class_1": 0.40302106738090515,
+    "predicted_class": 0,
+    "confidence": 0.5969789326190948
+  },
+  {
+    "record_type": "sample",
+    "image_file": "30_Benign_center2.png",
+    "image_name": "30_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5970448553562164,
+    "prob_class_1": 0.40295514464378357,
+    "predicted_class": 0,
+    "confidence": 0.5970448553562164
+  },
+  {
+    "record_type": "sample",
+    "image_file": "30_Malignant_center2.png",
+    "image_name": "30_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.596039891242981,
+    "prob_class_1": 0.40396010875701904,
+    "predicted_class": 0,
+    "confidence": 0.596039891242981
+  },
+  {
+    "record_type": "sample",
+    "image_file": "31_Benign_center2.png",
+    "image_name": "31_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5743132531642914,
+    "prob_class_1": 0.4256867468357086,
+    "predicted_class": 0,
+    "confidence": 0.5743132531642914
+  },
+  {
+    "record_type": "sample",
+    "image_file": "31_Malignant_center2.png",
+    "image_name": "31_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5899495184421539,
+    "prob_class_1": 0.41005048155784607,
+    "predicted_class": 0,
+    "confidence": 0.5899495184421539
+  },
+  {
+    "record_type": "sample",
+    "image_file": "32_Benign_center2.png",
+    "image_name": "32_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5782936215400696,
+    "prob_class_1": 0.4217063784599304,
+    "predicted_class": 0,
+    "confidence": 0.5782936215400696
+  },
+  {
+    "record_type": "sample",
+    "image_file": "32_Malignant_center2.png",
+    "image_name": "32_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5871769487857819,
+    "prob_class_1": 0.41282305121421814,
+    "predicted_class": 0,
+    "confidence": 0.5871769487857819
+  },
+  {
+    "record_type": "sample",
+    "image_file": "33_Benign_center2.png",
+    "image_name": "33_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.598614901304245,
+    "prob_class_1": 0.401385098695755,
+    "predicted_class": 0,
+    "confidence": 0.598614901304245
+  },
+  {
+    "record_type": "sample",
+    "image_file": "33_Malignant_center2.png",
+    "image_name": "33_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5970087349414825,
+    "prob_class_1": 0.40299126505851746,
+    "predicted_class": 0,
+    "confidence": 0.5970087349414825
+  },
+  {
+    "record_type": "sample",
+    "image_file": "34_Benign_center2.png",
+    "image_name": "34_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5970234572887421,
+    "prob_class_1": 0.40297654271125793,
+    "predicted_class": 0,
+    "confidence": 0.5970234572887421
+  },
+  {
+    "record_type": "sample",
+    "image_file": "34_Malignant_center2.png",
+    "image_name": "34_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5908191204071045,
+    "prob_class_1": 0.4091808795928955,
+    "predicted_class": 0,
+    "confidence": 0.5908191204071045
+  },
+  {
+    "record_type": "sample",
+    "image_file": "35_Benign_center2.png",
+    "image_name": "35_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5968979001045227,
+    "prob_class_1": 0.4031020998954773,
+    "predicted_class": 0,
+    "confidence": 0.5968979001045227
+  },
+  {
+    "record_type": "sample",
+    "image_file": "35_Malignant_center2.png",
+    "image_name": "35_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5938242375850677,
+    "prob_class_1": 0.40617576241493225,
+    "predicted_class": 0,
+    "confidence": 0.5938242375850677
+  },
+  {
+    "record_type": "sample",
+    "image_file": "36_Benign_center2.png",
+    "image_name": "36_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5984524488449097,
+    "prob_class_1": 0.40154755115509033,
+    "predicted_class": 0,
+    "confidence": 0.5984524488449097
+  },
+  {
+    "record_type": "sample",
+    "image_file": "36_Malignant_center2.png",
+    "image_name": "36_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5756052732467651,
+    "prob_class_1": 0.42439472675323486,
+    "predicted_class": 0,
+    "confidence": 0.5756052732467651
+  },
+  {
+    "record_type": "sample",
+    "image_file": "37_Benign_center2.png",
+    "image_name": "37_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5984002947807312,
+    "prob_class_1": 0.4015997052192688,
+    "predicted_class": 0,
+    "confidence": 0.5984002947807312
+  },
+  {
+    "record_type": "sample",
+    "image_file": "37_Malignant_center2.png",
+    "image_name": "37_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5850612223148346,
+    "prob_class_1": 0.4149387776851654,
+    "predicted_class": 0,
+    "confidence": 0.5850612223148346
+  },
+  {
+    "record_type": "sample",
+    "image_file": "38_Benign_center2.png",
+    "image_name": "38_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5972543954849243,
+    "prob_class_1": 0.4027456045150757,
+    "predicted_class": 0,
+    "confidence": 0.5972543954849243
+  },
+  {
+    "record_type": "sample",
+    "image_file": "38_Malignant_center2.png",
+    "image_name": "38_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5980449914932251,
+    "prob_class_1": 0.4019550085067749,
+    "predicted_class": 0,
+    "confidence": 0.5980449914932251
+  },
+  {
+    "record_type": "sample",
+    "image_file": "39_Benign_center2.png",
+    "image_name": "39_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5739243626594543,
+    "prob_class_1": 0.42607563734054565,
+    "predicted_class": 0,
+    "confidence": 0.5739243626594543
+  },
+  {
+    "record_type": "sample",
+    "image_file": "39_Malignant_center2.png",
+    "image_name": "39_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5989481210708618,
+    "prob_class_1": 0.4010518789291382,
+    "predicted_class": 0,
+    "confidence": 0.5989481210708618
+  },
+  {
+    "record_type": "sample",
+    "image_file": "3_Benign_center2.png",
+    "image_name": "3_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5770663917064667,
+    "prob_class_1": 0.4229336082935333,
+    "predicted_class": 0,
+    "confidence": 0.5770663917064667
+  },
+  {
+    "record_type": "sample",
+    "image_file": "3_Malignant_center2.png",
+    "image_name": "3_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5933127701282501,
+    "prob_class_1": 0.4066872298717499,
+    "predicted_class": 0,
+    "confidence": 0.5933127701282501
+  },
+  {
+    "record_type": "sample",
+    "image_file": "40_Benign_center2.png",
+    "image_name": "40_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5969992280006409,
+    "prob_class_1": 0.40300077199935913,
+    "predicted_class": 0,
+    "confidence": 0.5969992280006409
+  },
+  {
+    "record_type": "sample",
+    "image_file": "40_Malignant_center2.png",
+    "image_name": "40_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5745423138141632,
+    "prob_class_1": 0.4254576861858368,
+    "predicted_class": 0,
+    "confidence": 0.5745423138141632
+  },
+  {
+    "record_type": "sample",
+    "image_file": "41_Benign_center2.png",
+    "image_name": "41_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.595179408788681,
+    "prob_class_1": 0.40482059121131897,
+    "predicted_class": 0,
+    "confidence": 0.595179408788681
+  },
+  {
+    "record_type": "sample",
+    "image_file": "41_Malignant_center2.png",
+    "image_name": "41_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5883409678936005,
+    "prob_class_1": 0.41165903210639954,
+    "predicted_class": 0,
+    "confidence": 0.5883409678936005
+  },
+  {
+    "record_type": "sample",
+    "image_file": "42_Benign_center2.png",
+    "image_name": "42_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5984641015529633,
+    "prob_class_1": 0.40153589844703674,
+    "predicted_class": 0,
+    "confidence": 0.5984641015529633
+  },
+  {
+    "record_type": "sample",
+    "image_file": "42_Malignant_center2.png",
+    "image_name": "42_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5969957411289215,
+    "prob_class_1": 0.4030042588710785,
+    "predicted_class": 0,
+    "confidence": 0.5969957411289215
+  },
+  {
+    "record_type": "sample",
+    "image_file": "43_Benign_center2.png",
+    "image_name": "43_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5756213366985321,
+    "prob_class_1": 0.4243786633014679,
+    "predicted_class": 0,
+    "confidence": 0.5756213366985321
+  },
+  {
+    "record_type": "sample",
+    "image_file": "43_Malignant_center2.png",
+    "image_name": "43_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5984589755535126,
+    "prob_class_1": 0.4015410244464874,
+    "predicted_class": 0,
+    "confidence": 0.5984589755535126
+  },
+  {
+    "record_type": "sample",
+    "image_file": "44_Benign_center2.png",
+    "image_name": "44_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5976639091968536,
+    "prob_class_1": 0.40233609080314636,
+    "predicted_class": 0,
+    "confidence": 0.5976639091968536
+  },
+  {
+    "record_type": "sample",
+    "image_file": "44_Malignant_center2.png",
+    "image_name": "44_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5749165713787079,
+    "prob_class_1": 0.4250834286212921,
+    "predicted_class": 0,
+    "confidence": 0.5749165713787079
+  },
+  {
+    "record_type": "sample",
+    "image_file": "45_Benign_center2.png",
+    "image_name": "45_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5971011519432068,
+    "prob_class_1": 0.4028988480567932,
+    "predicted_class": 0,
+    "confidence": 0.5971011519432068
+  },
+  {
+    "record_type": "sample",
+    "image_file": "45_Malignant_center2.png",
+    "image_name": "45_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5978590846061707,
+    "prob_class_1": 0.40214091539382935,
+    "predicted_class": 0,
+    "confidence": 0.5978590846061707
+  },
+  {
+    "record_type": "sample",
+    "image_file": "46_Benign_center2.png",
+    "image_name": "46_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5930056273937225,
+    "prob_class_1": 0.40699437260627747,
+    "predicted_class": 0,
+    "confidence": 0.5930056273937225
+  },
+  {
+    "record_type": "sample",
+    "image_file": "46_Malignant_center2.png",
+    "image_name": "46_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5976867377758026,
+    "prob_class_1": 0.4023132622241974,
+    "predicted_class": 0,
+    "confidence": 0.5976867377758026
+  },
+  {
+    "record_type": "sample",
+    "image_file": "47_Benign_center2.png",
+    "image_name": "47_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5962172448635101,
+    "prob_class_1": 0.40378275513648987,
+    "predicted_class": 0,
+    "confidence": 0.5962172448635101
+  },
+  {
+    "record_type": "sample",
+    "image_file": "47_Malignant_center2.png",
+    "image_name": "47_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5784247815608978,
+    "prob_class_1": 0.4215752184391022,
+    "predicted_class": 0,
+    "confidence": 0.5784247815608978
+  },
+  {
+    "record_type": "sample",
+    "image_file": "48_Benign_center2.png",
+    "image_name": "48_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5917346775531769,
+    "prob_class_1": 0.4082653224468231,
+    "predicted_class": 0,
+    "confidence": 0.5917346775531769
+  },
+  {
+    "record_type": "sample",
+    "image_file": "48_Malignant_center2.png",
+    "image_name": "48_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5980917513370514,
+    "prob_class_1": 0.4019082486629486,
+    "predicted_class": 0,
+    "confidence": 0.5980917513370514
+  },
+  {
+    "record_type": "sample",
+    "image_file": "49_Benign_center2.png",
+    "image_name": "49_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5972186923027039,
+    "prob_class_1": 0.40278130769729614,
+    "predicted_class": 0,
+    "confidence": 0.5972186923027039
+  },
+  {
+    "record_type": "sample",
+    "image_file": "49_Malignant_center2.png",
+    "image_name": "49_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5949482917785645,
+    "prob_class_1": 0.40505170822143555,
+    "predicted_class": 0,
+    "confidence": 0.5949482917785645
+  },
+  {
+    "record_type": "sample",
+    "image_file": "4_Benign_center2.png",
+    "image_name": "4_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5960848033428192,
+    "prob_class_1": 0.4039151966571808,
+    "predicted_class": 0,
+    "confidence": 0.5960848033428192
+  },
+  {
+    "record_type": "sample",
+    "image_file": "4_Malignant_center2.png",
+    "image_name": "4_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5965162515640259,
+    "prob_class_1": 0.4034837484359741,
+    "predicted_class": 0,
+    "confidence": 0.5965162515640259
+  },
+  {
+    "record_type": "sample",
+    "image_file": "50_Benign_center2.png",
+    "image_name": "50_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5973187386989594,
+    "prob_class_1": 0.40268126130104065,
+    "predicted_class": 0,
+    "confidence": 0.5973187386989594
+  },
+  {
+    "record_type": "sample",
+    "image_file": "50_Malignant_center2.png",
+    "image_name": "50_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5896995961666107,
+    "prob_class_1": 0.4103004038333893,
+    "predicted_class": 0,
+    "confidence": 0.5896995961666107
+  },
+  {
+    "record_type": "sample",
+    "image_file": "51_Benign_center2.png",
+    "image_name": "51_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5979604721069336,
+    "prob_class_1": 0.4020395278930664,
+    "predicted_class": 0,
+    "confidence": 0.5979604721069336
+  },
+  {
+    "record_type": "sample",
+    "image_file": "51_Malignant_center2.png",
+    "image_name": "51_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.57703897356987,
+    "prob_class_1": 0.42296102643013,
+    "predicted_class": 0,
+    "confidence": 0.57703897356987
+  },
+  {
+    "record_type": "sample",
+    "image_file": "52_Benign_center2.png",
+    "image_name": "52_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5974598526954651,
+    "prob_class_1": 0.4025401473045349,
+    "predicted_class": 0,
+    "confidence": 0.5974598526954651
+  },
+  {
+    "record_type": "sample",
+    "image_file": "52_Malignant_center2.png",
+    "image_name": "52_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5746071338653564,
+    "prob_class_1": 0.42539286613464355,
+    "predicted_class": 0,
+    "confidence": 0.5746071338653564
+  },
+  {
+    "record_type": "sample",
+    "image_file": "53_Benign_center2.png",
+    "image_name": "53_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5738846957683563,
+    "prob_class_1": 0.4261153042316437,
+    "predicted_class": 0,
+    "confidence": 0.5738846957683563
+  },
+  {
+    "record_type": "sample",
+    "image_file": "53_Malignant_center2.png",
+    "image_name": "53_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5954720079898834,
+    "prob_class_1": 0.4045279920101166,
+    "predicted_class": 0,
+    "confidence": 0.5954720079898834
+  },
+  {
+    "record_type": "sample",
+    "image_file": "54_Benign_center2.png",
+    "image_name": "54_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5932752788066864,
+    "prob_class_1": 0.4067247211933136,
+    "predicted_class": 0,
+    "confidence": 0.5932752788066864
+  },
+  {
+    "record_type": "sample",
+    "image_file": "54_Malignant_center2.png",
+    "image_name": "54_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.573955774307251,
+    "prob_class_1": 0.426044225692749,
+    "predicted_class": 0,
+    "confidence": 0.573955774307251
+  },
+  {
+    "record_type": "sample",
+    "image_file": "55_Benign_center2.png",
+    "image_name": "55_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5863575041294098,
+    "prob_class_1": 0.4136424958705902,
+    "predicted_class": 0,
+    "confidence": 0.5863575041294098
+  },
+  {
+    "record_type": "sample",
+    "image_file": "55_Malignant_center2.png",
+    "image_name": "55_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5746362805366516,
+    "prob_class_1": 0.4253637194633484,
+    "predicted_class": 0,
+    "confidence": 0.5746362805366516
+  },
+  {
+    "record_type": "sample",
+    "image_file": "56_Benign_center2.png",
+    "image_name": "56_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5981550216674805,
+    "prob_class_1": 0.40184497833251953,
+    "predicted_class": 0,
+    "confidence": 0.5981550216674805
+  },
+  {
+    "record_type": "sample",
+    "image_file": "56_Malignant_center2.png",
+    "image_name": "56_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5920248031616211,
+    "prob_class_1": 0.4079751968383789,
+    "predicted_class": 0,
+    "confidence": 0.5920248031616211
+  },
+  {
+    "record_type": "sample",
+    "image_file": "57_Benign_center2.png",
+    "image_name": "57_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5874828100204468,
+    "prob_class_1": 0.4125171899795532,
+    "predicted_class": 0,
+    "confidence": 0.5874828100204468
+  },
+  {
+    "record_type": "sample",
+    "image_file": "57_Malignant_center2.png",
+    "image_name": "57_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5740238428115845,
+    "prob_class_1": 0.4259761571884155,
+    "predicted_class": 0,
+    "confidence": 0.5740238428115845
+  },
+  {
+    "record_type": "sample",
+    "image_file": "58_Benign_center2.png",
+    "image_name": "58_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5964424014091492,
+    "prob_class_1": 0.40355759859085083,
+    "predicted_class": 0,
+    "confidence": 0.5964424014091492
+  },
+  {
+    "record_type": "sample",
+    "image_file": "58_Malignant_center2.png",
+    "image_name": "58_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5982559025287628,
+    "prob_class_1": 0.4017440974712372,
+    "predicted_class": 0,
+    "confidence": 0.5982559025287628
+  },
+  {
+    "record_type": "sample",
+    "image_file": "59_Benign_center2.png",
+    "image_name": "59_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5952692329883575,
+    "prob_class_1": 0.40473076701164246,
+    "predicted_class": 0,
+    "confidence": 0.5952692329883575
+  },
+  {
+    "record_type": "sample",
+    "image_file": "59_Malignant_center2.png",
+    "image_name": "59_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.591581791639328,
+    "prob_class_1": 0.408418208360672,
+    "predicted_class": 0,
+    "confidence": 0.591581791639328
+  },
+  {
+    "record_type": "sample",
+    "image_file": "5_Benign_center2.png",
+    "image_name": "5_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5961029231548309,
+    "prob_class_1": 0.40389707684516907,
+    "predicted_class": 0,
+    "confidence": 0.5961029231548309
+  },
+  {
+    "record_type": "sample",
+    "image_file": "5_Malignant_center2.png",
+    "image_name": "5_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5938047468662262,
+    "prob_class_1": 0.4061952531337738,
+    "predicted_class": 0,
+    "confidence": 0.5938047468662262
+  },
+  {
+    "record_type": "sample",
+    "image_file": "60_Benign_center2.png",
+    "image_name": "60_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5945005416870117,
+    "prob_class_1": 0.4054994583129883,
+    "predicted_class": 0,
+    "confidence": 0.5945005416870117
+  },
+  {
+    "record_type": "sample",
+    "image_file": "60_Malignant_center2.png",
+    "image_name": "60_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5741486847400665,
+    "prob_class_1": 0.42585131525993347,
+    "predicted_class": 0,
+    "confidence": 0.5741486847400665
+  },
+  {
+    "record_type": "sample",
+    "image_file": "61_Benign_center2.png",
+    "image_name": "61_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5923413932323456,
+    "prob_class_1": 0.4076586067676544,
+    "predicted_class": 0,
+    "confidence": 0.5923413932323456
+  },
+  {
+    "record_type": "sample",
+    "image_file": "61_Malignant_center2.png",
+    "image_name": "61_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5898646712303162,
+    "prob_class_1": 0.41013532876968384,
+    "predicted_class": 0,
+    "confidence": 0.5898646712303162
+  },
+  {
+    "record_type": "sample",
+    "image_file": "62_Benign_center2.png",
+    "image_name": "62_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5772602260112762,
+    "prob_class_1": 0.42273977398872375,
+    "predicted_class": 0,
+    "confidence": 0.5772602260112762
+  },
+  {
+    "record_type": "sample",
+    "image_file": "62_Malignant_center2.png",
+    "image_name": "62_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5976111590862274,
+    "prob_class_1": 0.4023888409137726,
+    "predicted_class": 0,
+    "confidence": 0.5976111590862274
+  },
+  {
+    "record_type": "sample",
+    "image_file": "63_Benign_center2.png",
+    "image_name": "63_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5981955528259277,
+    "prob_class_1": 0.40180444717407227,
+    "predicted_class": 0,
+    "confidence": 0.5981955528259277
+  },
+  {
+    "record_type": "sample",
+    "image_file": "63_Malignant_center2.png",
+    "image_name": "63_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5744939744472504,
+    "prob_class_1": 0.42550602555274963,
+    "predicted_class": 0,
+    "confidence": 0.5744939744472504
+  },
+  {
+    "record_type": "sample",
+    "image_file": "64_Benign_center2.png",
+    "image_name": "64_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.590794026851654,
+    "prob_class_1": 0.40920597314834595,
+    "predicted_class": 0,
+    "confidence": 0.590794026851654
+  },
+  {
+    "record_type": "sample",
+    "image_file": "64_Malignant_center2.png",
+    "image_name": "64_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.576123058795929,
+    "prob_class_1": 0.42387694120407104,
+    "predicted_class": 0,
+    "confidence": 0.576123058795929
+  },
+  {
+    "record_type": "sample",
+    "image_file": "65_Benign_center2.png",
+    "image_name": "65_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5980913639068604,
+    "prob_class_1": 0.40190863609313965,
+    "predicted_class": 0,
+    "confidence": 0.5980913639068604
+  },
+  {
+    "record_type": "sample",
+    "image_file": "65_Malignant_center2.png",
+    "image_name": "65_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5981719195842743,
+    "prob_class_1": 0.4018280804157257,
+    "predicted_class": 0,
+    "confidence": 0.5981719195842743
+  },
+  {
+    "record_type": "sample",
+    "image_file": "66_Benign_center2.png",
+    "image_name": "66_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5952865183353424,
+    "prob_class_1": 0.4047134816646576,
+    "predicted_class": 0,
+    "confidence": 0.5952865183353424
+  },
+  {
+    "record_type": "sample",
+    "image_file": "66_Malignant_center2.png",
+    "image_name": "66_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5991147756576538,
+    "prob_class_1": 0.4008852243423462,
+    "predicted_class": 0,
+    "confidence": 0.5991147756576538
+  },
+  {
+    "record_type": "sample",
+    "image_file": "67_Benign_center2.png",
+    "image_name": "67_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5828303396701813,
+    "prob_class_1": 0.4171696603298187,
+    "predicted_class": 0,
+    "confidence": 0.5828303396701813
+  },
+  {
+    "record_type": "sample",
+    "image_file": "67_Malignant_center2.png",
+    "image_name": "67_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5985473394393921,
+    "prob_class_1": 0.4014526605606079,
+    "predicted_class": 0,
+    "confidence": 0.5985473394393921
+  },
+  {
+    "record_type": "sample",
+    "image_file": "68_Benign_center2.png",
+    "image_name": "68_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5949967503547668,
+    "prob_class_1": 0.40500324964523315,
+    "predicted_class": 0,
+    "confidence": 0.5949967503547668
+  },
+  {
+    "record_type": "sample",
+    "image_file": "68_Malignant_center2.png",
+    "image_name": "68_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5975537300109863,
+    "prob_class_1": 0.40244626998901367,
+    "predicted_class": 0,
+    "confidence": 0.5975537300109863
+  },
+  {
+    "record_type": "sample",
+    "image_file": "69_Benign_center2.png",
+    "image_name": "69_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5986661314964294,
+    "prob_class_1": 0.40133386850357056,
+    "predicted_class": 0,
+    "confidence": 0.5986661314964294
+  },
+  {
+    "record_type": "sample",
+    "image_file": "69_Malignant_center2.png",
+    "image_name": "69_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5984291434288025,
+    "prob_class_1": 0.4015708565711975,
+    "predicted_class": 0,
+    "confidence": 0.5984291434288025
+  },
+  {
+    "record_type": "sample",
+    "image_file": "6_Benign_center2.png",
+    "image_name": "6_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.578460305929184,
+    "prob_class_1": 0.42153969407081604,
+    "predicted_class": 0,
+    "confidence": 0.578460305929184
+  },
+  {
+    "record_type": "sample",
+    "image_file": "6_Malignant_center2.png",
+    "image_name": "6_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5978192389011383,
+    "prob_class_1": 0.4021807610988617,
+    "predicted_class": 0,
+    "confidence": 0.5978192389011383
+  },
+  {
+    "record_type": "sample",
+    "image_file": "70_Benign_center2.png",
+    "image_name": "70_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5972611904144287,
+    "prob_class_1": 0.4027388095855713,
+    "predicted_class": 0,
+    "confidence": 0.5972611904144287
+  },
+  {
+    "record_type": "sample",
+    "image_file": "70_Malignant_center2.png",
+    "image_name": "70_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5828834772109985,
+    "prob_class_1": 0.41711652278900146,
+    "predicted_class": 0,
+    "confidence": 0.5828834772109985
+  },
+  {
+    "record_type": "sample",
+    "image_file": "71_Benign_center2.png",
+    "image_name": "71_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.57694873213768,
+    "prob_class_1": 0.42305126786231995,
+    "predicted_class": 0,
+    "confidence": 0.57694873213768
+  },
+  {
+    "record_type": "sample",
+    "image_file": "71_Malignant_center2.png",
+    "image_name": "71_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5744847357273102,
+    "prob_class_1": 0.4255152642726898,
+    "predicted_class": 0,
+    "confidence": 0.5744847357273102
+  },
+  {
+    "record_type": "sample",
+    "image_file": "72_Benign_center2.png",
+    "image_name": "72_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5744116902351379,
+    "prob_class_1": 0.42558830976486206,
+    "predicted_class": 0,
+    "confidence": 0.5744116902351379
+  },
+  {
+    "record_type": "sample",
+    "image_file": "72_Malignant_center2.png",
+    "image_name": "72_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.58811816573143,
+    "prob_class_1": 0.41188183426856995,
+    "predicted_class": 0,
+    "confidence": 0.58811816573143
+  },
+  {
+    "record_type": "sample",
+    "image_file": "73_Benign_center2.png",
+    "image_name": "73_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5962004661560059,
+    "prob_class_1": 0.40379953384399414,
+    "predicted_class": 0,
+    "confidence": 0.5962004661560059
+  },
+  {
+    "record_type": "sample",
+    "image_file": "73_Malignant_center2.png",
+    "image_name": "73_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5983845293521881,
+    "prob_class_1": 0.4016154706478119,
+    "predicted_class": 0,
+    "confidence": 0.5983845293521881
+  },
+  {
+    "record_type": "sample",
+    "image_file": "74_Benign_center2.png",
+    "image_name": "74_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5882955491542816,
+    "prob_class_1": 0.4117044508457184,
+    "predicted_class": 0,
+    "confidence": 0.5882955491542816
+  },
+  {
+    "record_type": "sample",
+    "image_file": "74_Malignant_center2.png",
+    "image_name": "74_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5892807841300964,
+    "prob_class_1": 0.41071921586990356,
+    "predicted_class": 0,
+    "confidence": 0.5892807841300964
+  },
+  {
+    "record_type": "sample",
+    "image_file": "75_Benign_center2.png",
+    "image_name": "75_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5985520482063293,
+    "prob_class_1": 0.40144795179367065,
+    "predicted_class": 0,
+    "confidence": 0.5985520482063293
+  },
+  {
+    "record_type": "sample",
+    "image_file": "75_Malignant_center2.png",
+    "image_name": "75_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5984616279602051,
+    "prob_class_1": 0.4015383720397949,
+    "predicted_class": 0,
+    "confidence": 0.5984616279602051
+  },
+  {
+    "record_type": "sample",
+    "image_file": "76_Benign_center2.png",
+    "image_name": "76_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5979993939399719,
+    "prob_class_1": 0.4020006060600281,
+    "predicted_class": 0,
+    "confidence": 0.5979993939399719
+  },
+  {
+    "record_type": "sample",
+    "image_file": "76_Malignant_center2.png",
+    "image_name": "76_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5932755768299103,
+    "prob_class_1": 0.4067244231700897,
+    "predicted_class": 0,
+    "confidence": 0.5932755768299103
+  },
+  {
+    "record_type": "sample",
+    "image_file": "77_Malignant_center2.png",
+    "image_name": "77_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5973201990127563,
+    "prob_class_1": 0.40267980098724365,
+    "predicted_class": 0,
+    "confidence": 0.5973201990127563
+  },
+  {
+    "record_type": "sample",
+    "image_file": "78_Malignant_center2.png",
+    "image_name": "78_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5962206423282623,
+    "prob_class_1": 0.40377935767173767,
+    "predicted_class": 0,
+    "confidence": 0.5962206423282623
+  },
+  {
+    "record_type": "sample",
+    "image_file": "79_Malignant_center2.png",
+    "image_name": "79_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5827919840812683,
+    "prob_class_1": 0.4172080159187317,
+    "predicted_class": 0,
+    "confidence": 0.5827919840812683
+  },
+  {
+    "record_type": "sample",
+    "image_file": "7_Benign_center2.png",
+    "image_name": "7_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5885134041309357,
+    "prob_class_1": 0.41148659586906433,
+    "predicted_class": 0,
+    "confidence": 0.5885134041309357
+  },
+  {
+    "record_type": "sample",
+    "image_file": "7_Malignant_center2.png",
+    "image_name": "7_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5975411236286163,
+    "prob_class_1": 0.40245887637138367,
+    "predicted_class": 0,
+    "confidence": 0.5975411236286163
+  },
+  {
+    "record_type": "sample",
+    "image_file": "80_Malignant_center2.png",
+    "image_name": "80_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5984599888324738,
+    "prob_class_1": 0.40154001116752625,
+    "predicted_class": 0,
+    "confidence": 0.5984599888324738
+  },
+  {
+    "record_type": "sample",
+    "image_file": "81_Malignant_center2.png",
+    "image_name": "81_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.577812135219574,
+    "prob_class_1": 0.422187864780426,
+    "predicted_class": 0,
+    "confidence": 0.577812135219574
+  },
+  {
+    "record_type": "sample",
+    "image_file": "82_Malignant_center2.png",
+    "image_name": "82_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5983835458755493,
+    "prob_class_1": 0.4016164541244507,
+    "predicted_class": 0,
+    "confidence": 0.5983835458755493
+  },
+  {
+    "record_type": "sample",
+    "image_file": "8_Benign_center2.png",
+    "image_name": "8_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5834939777851105,
+    "prob_class_1": 0.4165060222148895,
+    "predicted_class": 0,
+    "confidence": 0.5834939777851105
+  },
+  {
+    "record_type": "sample",
+    "image_file": "8_Malignant_center2.png",
+    "image_name": "8_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.594344824552536,
+    "prob_class_1": 0.405655175447464,
+    "predicted_class": 0,
+    "confidence": 0.594344824552536
+  },
+  {
+    "record_type": "sample",
+    "image_file": "9_Benign_center2.png",
+    "image_name": "9_Benign_center2.png",
+    "true_label": 0,
+    "prob_class_0": 0.5960395336151123,
+    "prob_class_1": 0.4039604663848877,
+    "predicted_class": 0,
+    "confidence": 0.5960395336151123
+  },
+  {
+    "record_type": "sample",
+    "image_file": "9_Malignant_center2.png",
+    "image_name": "9_Malignant_center2.png",
+    "true_label": 1,
+    "prob_class_0": 0.5959880650043488,
+    "prob_class_1": 0.40401193499565125,
+    "predicted_class": 0,
+    "confidence": 0.5959880650043488
+  }
+]

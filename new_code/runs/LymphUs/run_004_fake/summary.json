@@ -1,0 +1,16 @@
+{
+  "output_dir": "new_code/runs/LymphUs/run_004_fake",
+  "best_model": "new_code/runs/LymphUs/run_004_fake/best_model.pth",
+  "best_metric": "auroc",
+  "best_score": 0.7754332477535302,
+  "train_samples": 220,
+  "test_samples": 158,
+  "norm_stats": {
+    "age_mean": 50.0,
+    "age_std": 1e-06,
+    "shape_mean": 0.0,
+    "shape_std": 1e-06,
+    "echo_mean": 0.0,
+    "echo_std": 1e-06
+  }
+}
