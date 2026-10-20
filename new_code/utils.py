@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 import os
 import pickle
@@ -122,6 +124,31 @@ def resolve_image_path(image_root: str | Path, filename: str) -> Path:
     return Path(image_root) / Path(filename)
 
 
+def load_image_roots_json(path: str | Path) -> dict[str, Path]:
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError(f"image_roots json must be a dict: {path}")
+    return {str(k): Path(v) for k, v in data.items()}
+
+
+def is_lymphus_style_filename(filename: str) -> bool:
+    stem = os.path.splitext(os.path.basename(filename))[0].lower()
+    return "_center1" in stem or "_center2" in stem
+
+
+def resolve_patient_id(record: dict, filename: str, image_root_key: str) -> str:
+    source = str(record.get("source") or "")
+    if source.startswith("lymphus") or is_lymphus_style_filename(filename):
+        # LymphUs fake/C1: same numeric case id can have both Benign/Malignant images with different labels.
+        prefix = source if source.startswith("lymphus") else "lymphus"
+        return f"{prefix}::{filename}"
+    patient_id = record.get("patient_id")
+    if patient_id is None:
+        patient_id = extract_name_from_filename(filename)
+    prefix = source or image_root_key
+    return f"{prefix}::{patient_id}"
+
+
 def build_sample_records(
     manifest_path: str | Path,
     image_root: str | Path,
@@ -133,8 +160,40 @@ def build_sample_records(
     shape_feature: str = "original_shape2D_Elongation",
     echo_feature: str = "original_firstorder_Mean",
     label_key: str = "LNM_CN01",
+    image_roots: dict[str, Path] | None = None,
+    default_image_root_key: str = "zjh",
 ) -> list[dict]:
     records = filter_labeled_samples(load_manifest(manifest_path), label_key=label_key)
+    return build_sample_records_from_list(
+        records=records,
+        image_root=image_root,
+        default_report=default_report,
+        default_age=default_age,
+        default_sex=default_sex,
+        patient_info_file=patient_info_file,
+        radiomics_csv=radiomics_csv,
+        shape_feature=shape_feature,
+        echo_feature=echo_feature,
+        label_key=label_key,
+        image_roots=image_roots,
+        default_image_root_key=default_image_root_key,
+    )
+
+
+def build_sample_records_from_list(
+    records: list[dict],
+    image_root: str | Path,
+    default_report: str = "",
+    default_age: float = 50.0,
+    default_sex: float = 1.0,
+    patient_info_file: str | Path | None = None,
+    radiomics_csv: str | Path | None = None,
+    shape_feature: str = "original_shape2D_Elongation",
+    echo_feature: str = "original_firstorder_Mean",
+    label_key: str = "LNM_CN01",
+    image_roots: dict[str, Path] | None = None,
+    default_image_root_key: str = "zjh",
+) -> list[dict]:
     patient_info_dict = load_patient_info(patient_info_file, default_age, default_sex)
     radiomics_dict = load_radiomics_features(radiomics_csv, shape_feature, echo_feature)
 
@@ -146,7 +205,16 @@ def build_sample_records(
         if filename_value is None:
             raise KeyError("record must contain 'filename' or 'image'")
         filename = str(filename_value).replace("\\", "/")
-        image_path = resolve_image_path(image_root, filename)
+
+        root_key = str(record.get("image_root_key", default_image_root_key))
+        if image_roots is not None:
+            if root_key not in image_roots:
+                raise KeyError(f"unknown image_root_key '{root_key}' in record: {filename}")
+            resolved_root = image_roots[root_key]
+        else:
+            resolved_root = Path(image_root)
+
+        image_path = resolve_image_path(resolved_root, filename)
         if not image_path.exists():
             missing_images.append(filename)
             continue
@@ -166,6 +234,9 @@ def build_sample_records(
             {
                 "filename": filename,
                 "image": filename,
+                "image_root": str(resolved_root),
+                "image_root_key": root_key,
+                "patient_id": resolve_patient_id(record, filename, root_key),
                 "LNM_CN01": int(record[label_key]),
                 "report": report,
                 "age": age,
@@ -173,6 +244,7 @@ def build_sample_records(
                 "shape": shape_val,
                 "echo": echo_val,
                 "mask_empty": mask_empty_val,
+                "source": record.get("source"),
             }
         )
 
@@ -285,6 +357,151 @@ def calculate_binary_metrics_confidence_intervals(
             "upper": float(np.percentile(values, upper_q)),
         }
         for name, values in bootstrap_metrics.items()
+    }
+
+
+def aggregate_predictions_by_patient(
+    y_true: np.ndarray,
+    y_prob: np.ndarray,
+    patient_ids: list[str] | np.ndarray,
+    strategy: str = "mean",
+) -> tuple[np.ndarray, np.ndarray, list[str]]:
+    y_true = np.asarray(y_true).astype(int)
+    y_prob = np.asarray(y_prob).astype(float)
+    patient_ids = list(patient_ids)
+
+    grouped: dict[str, list[tuple[int, float]]] = {}
+    for label, prob, pid in zip(y_true, y_prob, patient_ids):
+        grouped.setdefault(pid, []).append((int(label), float(prob)))
+
+    ordered_ids = sorted(grouped.keys())
+    patient_labels: list[int] = []
+    patient_probs: list[float] = []
+    for pid in ordered_ids:
+        pairs = grouped[pid]
+        labels = [p[0] for p in pairs]
+        if len(set(labels)) > 1:
+            raise ValueError(f"inconsistent labels for patient {pid}: {set(labels)}")
+        probs = [p[1] for p in pairs]
+        if strategy == "mean":
+            agg_prob = float(np.mean(probs))
+        elif strategy == "max":
+            agg_prob = float(np.max(probs))
+        else:
+            raise ValueError(f"unsupported aggregation strategy: {strategy}")
+        patient_labels.append(labels[0])
+        patient_probs.append(agg_prob)
+
+    return np.asarray(patient_labels, dtype=int), np.asarray(patient_probs, dtype=float), ordered_ids
+
+
+def calculate_binary_metrics_confidence_intervals_clustered(
+    y_true: np.ndarray,
+    y_prob: np.ndarray,
+    patient_ids: list[str] | np.ndarray,
+    threshold: float = 0.5,
+    n_bootstrap: int = 1000,
+    confidence_level: float = 0.95,
+    random_state: int = 42,
+    aggregation: str = "mean",
+) -> dict[str, dict[str, float]]:
+    patient_ids = np.asarray(patient_ids)
+    unique_patients = np.unique(patient_ids)
+    if unique_patients.size == 0:
+        return {}
+
+    rng = np.random.default_rng(random_state)
+    patient_to_indices: dict[str, np.ndarray] = {}
+    for pid in unique_patients:
+        patient_to_indices[str(pid)] = np.flatnonzero(patient_ids == pid)
+
+    y_patient, p_patient, _ = aggregate_predictions_by_patient(y_true, y_prob, patient_ids, strategy=aggregation)
+    metric_names = tuple(calculate_binary_metrics(y_patient, p_patient, threshold=threshold).keys())
+    bootstrap_metrics = {name: [] for name in metric_names}
+
+    for _ in range(n_bootstrap):
+        sampled = rng.choice(unique_patients, size=unique_patients.size, replace=True)
+        boot_labels: list[int] = []
+        boot_probs: list[float] = []
+        for pid in sampled:
+            indices = patient_to_indices[str(pid)]
+            labels = y_true[indices]
+            probs = y_prob[indices]
+            if len(set(labels.tolist())) > 1:
+                raise ValueError(f"inconsistent labels within patient cluster {pid}")
+            if aggregation == "mean":
+                boot_probs.append(float(np.mean(probs)))
+            else:
+                boot_probs.append(float(np.max(probs)))
+            boot_labels.append(int(labels[0]))
+        sampled_metrics = calculate_binary_metrics(
+            np.asarray(boot_labels, dtype=int),
+            np.asarray(boot_probs, dtype=float),
+            threshold=threshold,
+        )
+        for name in metric_names:
+            bootstrap_metrics[name].append(sampled_metrics[name])
+
+    alpha = 1.0 - confidence_level
+    lower_q = 100.0 * (alpha / 2.0)
+    upper_q = 100.0 * (1.0 - alpha / 2.0)
+
+    return {
+        name: {
+            "lower": float(np.percentile(values, lower_q)),
+            "upper": float(np.percentile(values, upper_q)),
+        }
+        for name, values in bootstrap_metrics.items()
+    }
+
+
+def summarize_binary_predictions(
+    y_true: np.ndarray,
+    y_prob: np.ndarray,
+    patient_ids: list[str] | np.ndarray,
+    n_bootstrap: int = 1000,
+    random_state: int = 42,
+    patient_aggregation: str = "mean",
+) -> dict[str, object]:
+    y_true = np.asarray(y_true).astype(int)
+    y_prob = np.asarray(y_prob).astype(float)
+
+    metrics_image = calculate_binary_metrics(y_true, y_prob)
+    metrics_image["confidence_intervals"] = calculate_binary_metrics_confidence_intervals(
+        y_true,
+        y_prob,
+        n_bootstrap=n_bootstrap,
+        random_state=random_state,
+    )
+
+    y_patient, p_patient, ordered_patient_ids = aggregate_predictions_by_patient(
+        y_true,
+        y_prob,
+        patient_ids,
+        strategy=patient_aggregation,
+    )
+    metrics_patient = calculate_binary_metrics(y_patient, p_patient)
+    metrics_patient["confidence_intervals"] = calculate_binary_metrics_confidence_intervals_clustered(
+        y_true,
+        y_prob,
+        patient_ids,
+        n_bootstrap=n_bootstrap,
+        random_state=random_state,
+        aggregation=patient_aggregation,
+    )
+    metrics_patient["n_patients"] = int(len(ordered_patient_ids))
+
+    return {
+        "metrics_image": metrics_image,
+        "metrics_patient": metrics_patient,
+        "patient_predictions": [
+            {
+                "patient_id": pid,
+                "true_label": int(label),
+                "prob_class_1": float(prob),
+            }
+            for pid, label, prob in zip(ordered_patient_ids, y_patient, p_patient)
+        ],
     }
 
 

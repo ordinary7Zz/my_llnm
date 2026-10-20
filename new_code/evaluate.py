@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from models.modeling_LLNM_Net import CONFIGS, LLNM_Net
 from new_code.dataset import LLNMDataset
 from new_code.engine import evaluate
-from new_code.utils import dump_json, load_pickle
+from new_code.utils import dump_json, load_image_roots_json, load_pickle
 
 
 def build_auroc_samples(outputs: dict[str, list]) -> list[dict[str, object]]:
@@ -68,6 +68,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--image_size", type=int, default=224)
     parser.add_argument("--resize_size", type=int, default=256)
     parser.add_argument("--device", type=str, default="cuda")
+    parser.add_argument("--image_roots_json", type=str, default=None)
     return parser.parse_args()
 
 
@@ -79,9 +80,11 @@ def main() -> None:
     device = torch.device(requested_device)
 
     norm_stats = load_pickle(args.norm_stats)
+    image_roots = load_image_roots_json(args.image_roots_json) if args.image_roots_json else None
     dataset = LLNMDataset(
         manifest_path=args.test_json,
         image_root=args.image_root,
+        image_roots=image_roots,
         patient_info_file=args.patient_info,
         radiomics_csv=args.radiomics_csv,
         default_report=args.default_report,
@@ -108,9 +111,16 @@ def main() -> None:
     model = model.to(device)
 
     metrics, outputs = evaluate(model, dataloader, device)
-    dump_json({"metrics": metrics, "outputs": outputs}, Path(args.output))
+    result = {
+        "metrics_image": metrics,
+        "metrics_patient": outputs["metrics_patient"],
+        "patient_predictions": outputs["patient_predictions"],
+        "outputs": outputs,
+    }
+    dump_json(result, Path(args.output))
     dump_json(build_auroc_samples(outputs), derive_auroc_output_path(args.output))
-    print(metrics)
+    print("image:", metrics)
+    print("patient:", outputs["metrics_patient"])
 
 
 if __name__ == "__main__":

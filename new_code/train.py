@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 from models.modeling_LLNM_Net import CONFIGS, LLNM_Net
 from new_code.dataset import LLNMDataset
 from new_code.engine import evaluate, train_one_epoch
-from new_code.utils import compute_normalization_stats, dump_json, ensure_dir, load_pickle, save_pickle
+from new_code.utils import compute_normalization_stats, dump_json, ensure_dir, load_image_roots_json, load_pickle, save_pickle
 
 
 def parse_args() -> argparse.Namespace:
@@ -46,9 +46,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--save_best_metric", type=str, choices=["auroc", "loss"], default="auroc")
     parser.add_argument("--save_all_epochs", action="store_true")
+    parser.add_argument(
+        "--image_roots_json",
+        type=str,
+        default=None,
+        help="JSON map of image_root_key -> path for multi-root manifests (B9 combined train)",
+    )
     args = parser.parse_args()
-    if args.train_image_root is None and args.image_root is None:
-        parser.error("one of --train_image_root or --image_root is required")
+    if args.train_image_root is None and args.image_root is None and args.image_roots_json is None:
+        parser.error("one of --train_image_root, --image_root, or --image_roots_json is required")
+    if args.image_roots_json:
+        roots = load_image_roots_json(args.image_roots_json)
+        if args.train_image_root is None:
+            args.train_image_root = str(roots.get("zjh", next(iter(roots.values()))))
+        if args.test_image_root is None:
+            args.test_image_root = str(roots.get("lymphus_fake", args.train_image_root))
     if args.train_image_root is None:
         args.train_image_root = args.image_root
     if args.test_image_root is None:
@@ -81,9 +93,14 @@ def main() -> None:
     output_dir = Path(args.output_dir) if args.output_dir else Path("new_code") / f"train_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     ensure_dir(output_dir)
 
+    image_roots = load_image_roots_json(args.image_roots_json) if args.image_roots_json else None
+    train_config = {k: getattr(args, k) for k in vars(args)}
+    dump_json(train_config, output_dir / "train_config.json")
+
     train_dataset_raw = LLNMDataset(
         manifest_path=args.train_json,
         image_root=args.train_image_root,
+        image_roots=image_roots,
         patient_info_file=args.patient_info,
         radiomics_csv=args.radiomics_csv,
         default_report=args.default_report,
@@ -100,6 +117,7 @@ def main() -> None:
     train_dataset = LLNMDataset(
         manifest_path=args.train_json,
         image_root=args.train_image_root,
+        image_roots=image_roots,
         patient_info_file=args.patient_info,
         radiomics_csv=args.radiomics_csv,
         default_report=args.default_report,
@@ -119,6 +137,7 @@ def main() -> None:
         test_dataset = LLNMDataset(
             manifest_path=args.test_json,
             image_root=args.test_image_root,
+            image_roots=image_roots,
             patient_info_file=args.patient_info,
             radiomics_csv=args.radiomics_csv,
             default_report=args.default_report,
@@ -181,9 +200,11 @@ def main() -> None:
         if test_loader is not None:
             test_metrics, test_outputs = evaluate(model, test_loader, device)
             epoch_record["test_metrics"] = test_metrics
+            epoch_record["test_metrics_patient"] = test_outputs.get("metrics_patient")
             print(
                 f"epoch {epoch}/{args.epochs} | "
                 f"test_auroc={test_metrics['auroc']:.4f} | "
+                f"test_patient_auroc={test_outputs['metrics_patient']['auroc']:.4f} | "
                 f"test_acc={test_metrics['acc']:.4f}"
             )
             candidate_score = test_metrics["auroc"] if args.save_best_metric == "auroc" else train_loss

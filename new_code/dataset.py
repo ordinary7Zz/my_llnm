@@ -15,8 +15,11 @@ from new_code.utils import apply_normalization, build_sample_records
 class LLNMDataset(Dataset):
     def __init__(
         self,
-        manifest_path: str | Path,
-        image_root: str | Path,
+        manifest_path: str | Path | None = None,
+        image_root: str | Path | None = None,
+        samples: list[dict] | None = None,
+        image_roots: dict[str, Path] | None = None,
+        default_image_root_key: str = "zjh",
         patient_info_file: str | Path | None = None,
         radiomics_csv: str | Path | None = None,
         default_report: str = "",
@@ -29,25 +32,50 @@ class LLNMDataset(Dataset):
         image_size: int = 224,
         resize_size: int = 256,
     ):
-        self.image_root = Path(image_root)
-        self.max_report_tokens = max_report_tokens
-        self.samples = build_sample_records(
-            manifest_path=manifest_path,
-            image_root=image_root,
-            default_report=default_report,
-            default_age=default_age,
-            default_sex=default_sex,
-            patient_info_file=patient_info_file,
-            radiomics_csv=radiomics_csv,
-            shape_feature=shape_feature,
-            echo_feature=echo_feature,
-        )
+        if samples is not None:
+            self.samples = [dict(sample) for sample in samples]
+            self.image_root = Path(image_root) if image_root is not None else None
+        elif manifest_path is not None and image_root is not None:
+            self.image_root = Path(image_root)
+            self.samples = build_sample_records(
+                manifest_path=manifest_path,
+                image_root=image_root,
+                default_report=default_report,
+                default_age=default_age,
+                default_sex=default_sex,
+                patient_info_file=patient_info_file,
+                radiomics_csv=radiomics_csv,
+                shape_feature=shape_feature,
+                echo_feature=echo_feature,
+                image_roots=image_roots,
+                default_image_root_key=default_image_root_key,
+            )
+        elif manifest_path is not None and image_roots is not None:
+            self.image_root = None
+            self.samples = build_sample_records(
+                manifest_path=manifest_path,
+                image_root=next(iter(image_roots.values())),
+                default_report=default_report,
+                default_age=default_age,
+                default_sex=default_sex,
+                patient_info_file=patient_info_file,
+                radiomics_csv=radiomics_csv,
+                shape_feature=shape_feature,
+                echo_feature=echo_feature,
+                image_roots=image_roots,
+                default_image_root_key=default_image_root_key,
+            )
+        else:
+            raise ValueError("provide (manifest_path + image_root/image_roots) or samples")
+
         if norm_stats is not None:
             self.samples = [apply_normalization(sample, norm_stats) for sample in self.samples]
 
         if not self.samples:
-            raise ValueError(f"no usable samples found in manifest: {manifest_path}")
+            label = manifest_path if manifest_path is not None else "samples"
+            raise ValueError(f"no usable samples found in: {label}")
 
+        self.max_report_tokens = max_report_tokens
         self.transform = transforms.Compose(
             [
                 transforms.Resize(resize_size),
@@ -84,7 +112,8 @@ class LLNMDataset(Dataset):
 
     def __getitem__(self, idx: int):
         sample = self.samples[idx]
-        image_path = self.image_root / sample["image"]
+        image_root = Path(sample.get("image_root", self.image_root))
+        image_path = image_root / sample["image"]
         image = Image.open(image_path).convert("RGB")
         image = self.transform(image)
 
@@ -100,4 +129,5 @@ class LLNMDataset(Dataset):
             "demo": demo,
             "img_fea": img_fea,
             "path": sample["image"],
+            "patient_id": sample.get("patient_id", sample["image"]),
         }

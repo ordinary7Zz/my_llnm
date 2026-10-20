@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from new_code.utils import calculate_binary_metrics, calculate_binary_metrics_confidence_intervals
+from new_code.utils import calculate_binary_metrics, calculate_binary_metrics_confidence_intervals, summarize_binary_predictions
 
 
 @torch.no_grad()
@@ -13,6 +13,7 @@ def evaluate(model, dataloader: DataLoader, device: torch.device) -> tuple[dict[
     all_labels = []
     all_probs = []
     all_paths = []
+    all_patient_ids = []
 
     for batch in tqdm(dataloader, desc="Evaluating", leave=False):
         images = batch["image"].to(device, non_blocking=True)
@@ -29,13 +30,17 @@ def evaluate(model, dataloader: DataLoader, device: torch.device) -> tuple[dict[
         all_labels.extend(labels.cpu().numpy().tolist())
         all_probs.extend(pos_probs.cpu().numpy().tolist())
         all_paths.extend(batch["path"])
+        all_patient_ids.extend(batch["patient_id"])
 
-    metrics = calculate_binary_metrics(all_labels, all_probs)
-    metrics["confidence_intervals"] = calculate_binary_metrics_confidence_intervals(all_labels, all_probs)
+    summary = summarize_binary_predictions(all_labels, all_probs, all_patient_ids)
+    metrics = summary["metrics_image"]
     outputs = {
         "paths": all_paths,
         "labels": all_labels,
         "probs": all_probs,
+        "patient_ids": all_patient_ids,
+        "metrics_patient": summary["metrics_patient"],
+        "patient_predictions": summary["patient_predictions"],
     }
     return metrics, outputs
 

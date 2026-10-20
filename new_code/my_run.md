@@ -252,3 +252,40 @@ python new_code/train.py \
   --learning_rate 1e-5 \
   --save_all_epochs
 ```
+
+---
+
+## B9 返修（LNM）
+
+计划说明见 `docs/B9_LNM_构建计划.md`。数据目录：
+
+`/mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/LNM_ThyroidXAgent_ZJH_LymphUs_fake/`
+
+### 生成 manifest
+
+```bash
+python new_code/build_lnm_paper_dataset.py
+```
+
+### 患者级 5 折 CV
+
+```bash
+python new_code/run_b9_patient_cv.py \
+  --output_dir ./new_code/runs/b9_cv \
+  --epochs 50 \
+  --device cuda
+```
+
+### 合并训练 + LymphUs C2 外部测试
+
+```bash
+DATA=/mnt/wangbd8/workspace/DataSets/ThyroidAgent/Classifaction_Data/LNM_ThyroidXAgent_ZJH_LymphUs_fake
+
+python new_code/train.py \
+  --train_json $DATA/manifests/train_combined_zjh_plus_lymphus_c1.json \
+  --test_json $DATA/manifests/lymphus_center2_test_LLNM_only.json \
+  --image_roots_json $DATA/image_roots.json \
+  --output_dir ./new_code/runs/b9_full_train
+```
+
+训练与 `evaluate.py` 会输出图像级与患者级 AUROC（含聚类 bootstrap CI）。
